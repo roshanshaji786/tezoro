@@ -1,0 +1,367 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Tezoro Brand Proposal — DARTS AI</title>
+<style>
+@font-face{font-family:"Cormorant";src:url("../../proposal/source/fonts/Cormorant.ttf");font-weight:300 700}
+@font-face{font-family:"Cinzel";src:url("../../proposal/source/fonts/Cinzel.ttf");font-weight:400 900}
+:root{--ink:#141414;--ink2:#3A3A3A;--grey:#7A7A7A;--rule:#E4E4E4;--accent:#A87B3A;--bg:#FFFFFF;--soft:#F6F4F0}
+@page{size:A4;margin:0}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:#999}
+body{font-family:"Inter",sans-serif;font-size:9.6pt;line-height:1.6;color:var(--ink);-webkit-print-color-adjust:exact;print-color-adjust:exact;font-feature-settings:"ss01","cv11"}
+.page{width:210mm;height:297mm;position:relative;overflow:hidden;background:var(--bg);padding:34mm 20mm 26mm;page-break-after:always}
+.page:last-child{page-break-after:auto}
+
+/* running header / footer */
+.hdr,.ftr{position:absolute;left:20mm;right:20mm;display:flex;justify-content:space-between;font-size:6.8pt;letter-spacing:.18em;text-transform:uppercase;color:var(--grey)}
+.hdr{top:13mm}
+.ftr{bottom:13mm}
+.hdr b,.ftr b{font-weight:600;color:var(--ink)}
+
+/* type */
+.label{font-size:7pt;letter-spacing:.2em;text-transform:uppercase;color:var(--grey);font-weight:500}
+.label .n{color:var(--accent);font-weight:600;margin-right:3mm}
+h1{font-family:"Inter Display","Inter";font-weight:300;font-size:46pt;line-height:1.02;letter-spacing:-.025em}
+h2{font-family:"Inter Display","Inter";font-weight:300;font-size:30pt;line-height:1.08;letter-spacing:-.022em;margin:6mm 0 5mm}
+h3{font-family:"Inter Display","Inter";font-weight:500;font-size:12pt;letter-spacing:-.01em;line-height:1.3}
+.lead{font-size:11.5pt;font-weight:300;line-height:1.6;color:var(--ink2);max-width:135mm}
+.muted{color:var(--grey)}
+.accent{color:var(--accent)}
+.rule{height:1px;background:var(--rule)}
+.dash{display:inline-block;width:6mm;height:1px;background:var(--accent);vertical-align:middle;margin-right:3mm}
+
+/* generic rows */
+.rows{margin-top:12mm;border-top:1px solid var(--ink)}
+.row{display:grid;grid-template-columns:14mm 46mm 1fr;gap:4mm;padding:5.2mm 0;border-bottom:1px solid var(--rule);align-items:baseline}
+.row .n{font-size:8pt;font-weight:600;color:var(--accent);letter-spacing:.06em}
+.row p{color:var(--ink2);font-weight:300;font-size:10pt}
+.section-head{display:flex;justify-content:space-between;align-items:baseline;margin-top:12mm;padding-bottom:3mm}
+
+/* grid 2x2 */
+.grid2{display:grid;grid-template-columns:1fr 1fr;column-gap:12mm;border-top:1px solid var(--ink);margin-top:4mm}
+.cell{padding:6mm 0 6mm;border-bottom:1px solid var(--rule)}
+.cell .n{font-size:8pt;font-weight:600;color:var(--accent);letter-spacing:.06em;margin-bottom:2mm}
+.cell h3{margin-bottom:1.4mm}
+.cell p{color:var(--ink2);font-weight:300;font-size:9.6pt}
+
+/* ---------- cover ---------- */
+.cover{padding:0}
+.cover .logo{position:absolute;top:20mm;left:20mm;height:22mm}
+.cover .tr{position:absolute;top:22mm;right:20mm;text-align:right}
+.cover .main{position:absolute;left:20mm;right:20mm;top:98mm}
+.cover .main .label{margin-bottom:9mm}
+.cover .for{margin-top:12mm;display:flex;align-items:center;gap:5mm}
+.cover .for .bar{width:12mm;height:1px;background:var(--accent)}
+.cover .for span{font-family:"Inter Display";font-weight:300;font-size:16pt;letter-spacing:-.01em;color:var(--ink2)}
+.cover .meta{position:absolute;left:20mm;right:20mm;bottom:22mm;display:grid;grid-template-columns:1.25fr 1.4fr 1fr 1fr;gap:6mm;border-top:1px solid var(--ink);padding-top:5mm}
+.cover .meta .label{margin-bottom:2mm}
+.cover .meta div p{font-size:9pt;line-height:1.5}
+.cover .meta div p.muted{font-size:8.4pt}
+.cover .side{position:absolute;right:20mm;top:98mm;width:1px;height:62mm;background:var(--rule)}
+
+/* ---------- about ---------- */
+.offices{margin-top:12mm;display:grid;grid-template-columns:repeat(3,1fr);gap:6mm}
+.office{border-top:1px solid var(--rule);padding-top:4mm}
+.office h3{font-size:11pt}
+.office p{font-size:8.6pt;color:var(--grey);font-weight:300;margin-top:1mm}
+
+/* ---------- understanding ---------- */
+.quote{margin:12mm 0 12mm;padding:10mm 0 10mm 12mm;border-left:2px solid var(--accent)}
+.quote blockquote{font-family:"Inter Display";font-weight:200;font-size:25pt;line-height:1.2;letter-spacing:-.02em}
+.quote .src{margin-top:5mm}
+
+/* ---------- achieve ---------- */
+.achieve{margin-top:14mm;background:var(--soft);padding:9mm 10mm}
+.achieve .grid{display:grid;grid-template-columns:1fr 1fr;gap:6mm 12mm;margin-top:6mm}
+.achieve h3{font-size:11pt;margin-bottom:1mm}
+.achieve p{font-size:9.2pt;color:var(--ink2);font-weight:300}
+
+/* ---------- colours ---------- */
+.pal{display:grid;grid-template-columns:52mm 1fr;gap:8mm;padding:5.5mm 0;border-bottom:1px solid var(--rule)}
+.pal:first-of-type{border-top:1px solid var(--ink)}
+.pal .opt{font-size:7pt;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);font-weight:600}
+.pal h3{font-size:13pt;margin:1.5mm 0 1.2mm}
+.pal p{font-size:9pt;color:var(--grey);font-weight:300}
+.swatches{display:grid;grid-template-columns:1.35fr 1fr 1fr 1fr;gap:2.5mm}
+.sw .chip{height:21mm;border:1px solid rgba(0,0,0,.06)}
+.sw .chip.wm{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1.5mm}
+.sw .chip.wm b{font-family:"Cormorant";font-weight:600;font-size:14pt;letter-spacing:.22em;padding-left:.22em}
+.sw .chip.wm i{font-family:"Inter";font-style:normal;font-weight:500;font-size:4.6pt;letter-spacing:.5em;padding-left:.5em}
+.sw .nm{font-size:7.6pt;font-weight:500;margin-top:2mm}
+.sw .hx{font-size:7.2pt;color:var(--grey);letter-spacing:.04em}
+.logo-dir{display:grid;grid-template-columns:52mm 1fr;gap:8mm;margin-top:8mm;align-items:start}
+.logo-dir .mark{display:flex;align-items:center;gap:6mm}
+.mono{width:16mm;height:16mm;border:1px solid var(--ink);display:flex;align-items:center;justify-content:center;font-family:"Cormorant";font-size:30pt;font-weight:500;line-height:1}
+.wordmark{font-family:"Cormorant";font-weight:600;font-size:21pt;letter-spacing:.22em;line-height:1}
+.wordmark small{display:block;font-family:"Inter";font-weight:500;font-size:5.4pt;letter-spacing:.62em;color:var(--grey);margin-top:2mm}
+.logo-dir p{font-size:9.6pt;color:var(--ink2);font-weight:300}
+
+/* ---------- why ---------- */
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:12mm;margin-top:12mm}
+.col .label{padding-bottom:3mm;border-bottom:1px solid var(--ink);margin-bottom:1mm}
+.item{padding:4.5mm 0;border-bottom:1px solid var(--rule)}
+.item h3{font-size:11.2pt;margin-bottom:1mm}
+.item p{font-size:9.2pt;color:var(--ink2);font-weight:300}
+.statement{margin-top:13mm;display:grid;grid-template-columns:52mm 1fr;gap:8mm;align-items:center;border-top:1px solid var(--ink);padding-top:7mm}
+.statement .big{font-family:"Inter Display";font-weight:200;font-size:46pt;letter-spacing:-.03em;line-height:1;color:var(--accent)}
+.statement p{font-size:11pt;font-weight:300;color:var(--ink2);line-height:1.55}
+.statement p b{font-weight:500;color:var(--ink)}
+
+/* ---------- investment ---------- */
+.kit{margin-top:11mm;border-top:1px solid var(--ink)}
+.kit-head{display:flex;justify-content:space-between;align-items:baseline;padding:5mm 0 4mm;border-bottom:1px solid var(--rule)}
+.kit-head h3{font-size:15pt;font-weight:500}
+.kit-head .tag{font-size:6.8pt;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);font-weight:600;border:1px solid var(--accent);padding:1mm 2.5mm}
+.line{display:grid;grid-template-columns:1fr 34mm;gap:8mm;padding:5.5mm 0;border-bottom:1px solid var(--rule);align-items:start}
+.line h4{font-family:"Inter Display";font-weight:500;font-size:11.5pt;letter-spacing:-.005em}
+.line p{font-size:8.9pt;color:var(--grey);font-weight:300;margin-top:1mm;line-height:1.55}
+.line .amt{text-align:right;font-family:"Inter Display";font-weight:400;font-size:13pt;font-variant-numeric:tabular-nums}
+.total{display:grid;grid-template-columns:1fr auto;align-items:end;padding:7mm 0 6mm;border-bottom:1px solid var(--ink)}
+.total .label{margin-bottom:1.5mm}
+.total p{font-size:9pt;color:var(--grey);font-weight:300}
+.total .amt{font-family:"Inter Display";font-weight:300;font-size:40pt;letter-spacing:-.03em;line-height:1;font-variant-numeric:tabular-nums}
+.total .amt span{font-size:22pt;vertical-align:.55em;margin-right:1mm;color:var(--accent)}
+.platform{margin-top:11mm}
+.platform .label{margin-bottom:4mm}
+.plat{display:grid;grid-template-columns:repeat(5,1fr);border-top:1px solid var(--rule)}
+.plat div{padding:4mm 3mm 0 0}
+.plat div+div{padding-left:3mm;border-left:1px solid var(--rule)}
+.plat h4{font-family:"Inter Display";font-weight:500;font-size:9.6pt;line-height:1.3}
+.plat p{font-size:7.8pt;color:var(--grey);font-weight:300;margin-top:1mm;line-height:1.45}
+
+/* ---------- contact ---------- */
+.contact{background:#121212;color:#F2F0EC;padding:0}
+.contact .hdr,.contact .ftr{color:#8C8C8C}
+.contact .hdr b,.contact .ftr b{color:#F2F0EC}
+.contact .logo{position:absolute;top:24mm;left:20mm;height:26mm}
+.contact .main{position:absolute;left:20mm;right:20mm;top:104mm}
+.contact h1{color:#F2F0EC}
+.contact .lead{color:#BDBAB4;margin-top:7mm}
+.contact .grid{position:absolute;left:20mm;right:20mm;bottom:40mm;display:grid;grid-template-columns:repeat(3,1fr);gap:8mm;border-top:1px solid #F2F0EC;padding-top:6mm}
+.contact .grid .label{color:#8C8C8C;margin-bottom:2.5mm}
+.contact .grid p{font-family:"Inter Display";font-weight:300;font-size:14pt;letter-spacing:-.005em}
+.contact .co{position:absolute;left:20mm;bottom:24mm;font-size:7pt;letter-spacing:.2em;text-transform:uppercase;color:#8C8C8C}
+</style>
+</head>
+<body>
+
+<!-- 01 COVER -->
+<section class="page cover">
+  <img class="logo" src="../../proposal/source/logo_light.png" alt="DARTS AI">
+  <div class="tr"><div class="label">Proposal &amp; Quotation</div></div>
+  <div class="main">
+    <div class="label"><span class="n">—</span>Brand Identity Proposal</div>
+    <h1>Brand Identity &amp;<br>Digital Presence</h1>
+    <div class="for"><div class="bar"></div><span>Prepared for Tezoro</span></div>
+  </div>
+  <div class="meta">
+    <div><div class="label">Prepared for</div><p><b>Tezoro</b></p><p class="muted">Attn. Safnal, Pothencode</p></div>
+    <div><div class="label">Prepared by</div><p><b>DARTS AI</b></p><p class="muted">DanRosh Tech Solutions Pvt Ltd</p></div>
+    <div><div class="label">Date</div><p>20 October 2026</p></div>
+    <div><div class="label">Quote No.</div><p>DAI/TZ/2026/001</p></div>
+  </div>
+</section>
+
+<!-- 02 ABOUT -->
+<section class="page">
+  <div class="hdr"><span><b>DARTS AI</b></span><span>Brand Proposal — Tezoro</span></div>
+  <div class="label"><span class="n">01</span>About Us</div>
+  <h2>Technology that builds brands.</h2>
+  <p class="lead">DARTS AI is a brand of DanRosh Tech Solutions Pvt Ltd, a technology company operating across India, Slovenia and the United States. We combine design, technology and AI-driven marketing so that brands don't just look premium — they perform online.</p>
+
+  <div class="section-head" style="margin-top:14mm"><div class="label">What we do</div></div>
+  <div class="rows" style="margin-top:0">
+    <div class="row"><span class="n">01</span><h3>Brand Identity</h3><p>Logos, colour systems, typography and brand guides that set a business apart.</p></div>
+    <div class="row"><span class="n">02</span><h3>Websites &amp; E-commerce</h3><p>Fast, mobile-first websites and online stores built to convert visitors into customers.</p></div>
+    <div class="row"><span class="n">03</span><h3>AI-Powered Marketing</h3><p>Targeted campaigns that reach the right customers and show measurable results.</p></div>
+    <div class="row"><span class="n">04</span><h3>Cloud Hosting &amp; Support</h3><p>Secure hosting, ongoing maintenance and a team that stays with you after launch.</p></div>
+  </div>
+
+  <div class="section-head" style="margin-top:16mm"><div class="label">Where we operate</div></div>
+  <div class="offices" style="margin-top:0">
+    <div class="office"><h3>India</h3><p>Engineering &amp; delivery</p></div>
+    <div class="office"><h3>Slovenia</h3><p>Headquarters</p></div>
+    <div class="office"><h3>United States</h3><p>Technology &amp; innovation</p></div>
+  </div>
+  <div class="ftr"><span>DanRosh Tech Solutions Pvt Ltd</span><span><b>02</b> / 08</span></div>
+</section>
+
+<!-- 03 UNDERSTANDING -->
+<section class="page">
+  <div class="hdr"><span><b>DARTS AI</b></span><span>Brand Proposal — Tezoro</span></div>
+  <div class="label"><span class="n">02</span>Our Understanding</div>
+  <h2>The idea behind Tezoro.</h2>
+  <p class="lead">Tezoro brings premium custom tailoring and an exclusive men's wedding floor to Pothencode — a place where every customer walks out in something made for him, and only him.</p>
+
+  <div class="quote">
+    <blockquote>“Every man deserves a look<br>that is his alone.”</blockquote>
+    <div class="label src">The Tezoro promise</div>
+  </div>
+
+  <div class="label" style="margin-top:4mm">What makes Tezoro special</div>
+  <div class="grid2">
+    <div class="cell"><div class="n">01</div><h3>One man, one look</h3><p>Every piece is tailored to his fit, his fabric and his style.</p></div>
+    <div class="cell"><div class="n">02</div><h3>Bespoke craftsmanship</h3><p>Premium fabrics, precise measurements and expert finishing.</p></div>
+    <div class="cell"><div class="n">03</div><h3>A men's wedding destination</h3><p>A dedicated floor for grooms, families and celebrations.</p></div>
+    <div class="cell"><div class="n">04</div><h3>A boutique experience</h3><p>Personal attention and time with every customer.</p></div>
+  </div>
+  <div class="ftr"><span>DanRosh Tech Solutions Pvt Ltd</span><span><b>03</b> / 08</span></div>
+</section>
+
+<!-- 04 APPROACH -->
+<section class="page">
+  <div class="hdr"><span><b>DARTS AI</b></span><span>Brand Proposal — Tezoro</span></div>
+  <div class="label"><span class="n">03</span>Our Approach</div>
+  <h2>How we will build the Tezoro brand.</h2>
+  <div class="rows">
+    <div class="row"><span class="n">01</span><h3>Discover</h3><p>We understand Tezoro's customers, market and the feeling the brand should create.</p></div>
+    <div class="row"><span class="n">02</span><h3>Define</h3><p>We shape the brand personality and voice around “made for you, only you.”</p></div>
+    <div class="row"><span class="n">03</span><h3>Design</h3><p>We create the logo, colours, typography and 3D brand assets.</p></div>
+    <div class="row"><span class="n">04</span><h3>Digitise</h3><p>We build a website that works as Tezoro's 24/7 digital showroom.</p></div>
+    <div class="row"><span class="n">05</span><h3>Grow</h3><p>Targeted digital marketing reaches grooms and style-conscious men.</p></div>
+  </div>
+
+  <div class="achieve">
+    <div class="label"><span class="n">—</span>What Tezoro achieves with DARTS AI</div>
+    <div class="grid">
+      <div><h3>Premium from day one</h3><p>A look that justifies premium pricing.</p></div>
+      <div><h3>Consistency everywhere</h3><p>Store, Instagram, website, bags and tags.</p></div>
+      <div><h3>Trust before the first visit</h3><p>Customers check online before they walk in.</p></div>
+      <div><h3>One partner for everything</h3><p>Brand, web and marketing — ready to grow with Tezoro.</p></div>
+    </div>
+  </div>
+  <div class="ftr"><span>DanRosh Tech Solutions Pvt Ltd</span><span><b>04</b> / 08</span></div>
+</section>
+
+<!-- 05 COLOURS -->
+<section class="page">
+  <div class="hdr"><span><b>DARTS AI</b></span><span>Brand Proposal — Tezoro</span></div>
+  <div class="label"><span class="n">04</span>Brand Colours</div>
+  <h2>Three directions. One signature.</h2>
+  <p class="lead">Tezoro picks one palette, and we build the full identity around it.</p>
+
+  <div style="margin-top:9mm">
+    <div class="pal">
+      <div><div class="opt">Option A</div><h3>Ivory &amp; Antique Gold</h3><p>Timeless luxury for bespoke tailoring.</p></div>
+      <div class="swatches">
+        <div class="sw"><div class="chip wm" style="background:#F5EFE6;color:#2B2B2B"><b>TEZORO</b><i style="color:#B8893E">ATELIER</i></div><div class="nm">Wordmark</div><div class="hx">On ivory</div></div>
+        <div class="sw"><div class="chip" style="background:#F5EFE6"></div><div class="nm">Ivory</div><div class="hx">#F5EFE6</div></div>
+        <div class="sw"><div class="chip" style="background:#B8893E"></div><div class="nm">Antique Gold</div><div class="hx">#B8893E</div></div>
+        <div class="sw"><div class="chip" style="background:#2B2B2B"></div><div class="nm">Charcoal</div><div class="hx">#2B2B2B</div></div>
+      </div>
+    </div>
+    <div class="pal">
+      <div><div class="opt">Option B</div><h3>Midnight Navy &amp; Champagne</h3><p>The confidence of a perfect suit.</p></div>
+      <div class="swatches">
+        <div class="sw"><div class="chip wm" style="background:#14213D;color:#D4B483"><b>TEZORO</b><i style="color:#F4F1EA">ATELIER</i></div><div class="nm">Wordmark</div><div class="hx">On navy</div></div>
+        <div class="sw"><div class="chip" style="background:#14213D"></div><div class="nm">Midnight Navy</div><div class="hx">#14213D</div></div>
+        <div class="sw"><div class="chip" style="background:#D4B483"></div><div class="nm">Champagne</div><div class="hx">#D4B483</div></div>
+        <div class="sw"><div class="chip" style="background:#F4F1EA"></div><div class="nm">Soft White</div><div class="hx">#F4F1EA</div></div>
+      </div>
+    </div>
+    <div class="pal">
+      <div><div class="opt">Option C</div><h3>Royal Emerald &amp; Gold</h3><p>Regal and celebratory — made for the wedding floor.</p></div>
+      <div class="swatches">
+        <div class="sw"><div class="chip wm" style="background:#0F3D2E;color:#C9A227"><b>TEZORO</b><i style="color:#FAF7F0">ATELIER</i></div><div class="nm">Wordmark</div><div class="hx">On emerald</div></div>
+        <div class="sw"><div class="chip" style="background:#0F3D2E"></div><div class="nm">Royal Emerald</div><div class="hx">#0F3D2E</div></div>
+        <div class="sw"><div class="chip" style="background:#C9A227"></div><div class="nm">Gold</div><div class="hx">#C9A227</div></div>
+        <div class="sw"><div class="chip" style="background:#FAF7F0"></div><div class="nm">Cream</div><div class="hx">#FAF7F0</div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="logo-dir">
+    <div><div class="opt label" style="color:var(--accent);font-weight:600">Logo Direction</div><h3 style="font-size:13pt;margin-top:1.5mm">Minimal &amp; timeless</h3></div>
+    <div>
+      <div class="mark" style="margin-bottom:5mm"><div class="mono">T</div><div class="wordmark">TEZORO<small>ATELIER</small></div></div>
+      <p>A minimalist serif wordmark with a subtle “T” monogram. Understated, confident and made to last — as sharp on a garment tag as on a phone screen.</p>
+    </div>
+  </div>
+  <div class="ftr"><span>DanRosh Tech Solutions Pvt Ltd</span><span><b>05</b> / 08</span></div>
+</section>
+
+<!-- 06 WHY -->
+<section class="page">
+  <div class="hdr"><span><b>DARTS AI</b></span><span>Brand Proposal — Tezoro</span></div>
+  <div class="label"><span class="n">05</span>Why It Matters</div>
+  <h2>Your brand is the first fitting.</h2>
+  <p class="lead">Before a customer feels the fabric, he judges the name, the logo and the Instagram page.</p>
+
+  <div class="cols">
+    <div class="col">
+      <div class="label">The power of branding</div>
+      <div class="item"><h3>Premium brands earn premium prices</h3><p>Customers pay more when a brand feels exclusive and trustworthy.</p></div>
+      <div class="item"><h3>Recognition builds loyalty</h3><p>Tezoro becomes the first name men think of for weddings and occasions.</p></div>
+      <div class="item"><h3>A silent salesman</h3><p>Your brand works on every bag, tag and post — every single day.</p></div>
+    </div>
+    <div class="col">
+      <div class="label">Why digital marketing</div>
+      <div class="item"><h3>Customers are online first</h3><p>Men search and compare on Instagram and Google before visiting a store.</p></div>
+      <div class="item"><h3>Wedding plans start early</h3><p>Digital campaigns reach grooms and families months ahead.</p></div>
+      <div class="item"><h3>Results are measurable</h3><p>Every enquiry, visit and booking can be tracked.</p></div>
+    </div>
+  </div>
+
+  <div class="statement">
+    <div class="big">24/7</div>
+    <p><b>Online, Tezoro is open even when the shutters are down</b> — showcasing collections, answering enquiries and taking appointment bookings around the clock.</p>
+  </div>
+  <div class="ftr"><span>DanRosh Tech Solutions Pvt Ltd</span><span><b>06</b> / 08</span></div>
+</section>
+
+<!-- 07 INVESTMENT -->
+<section class="page">
+  <div class="hdr"><span><b>DARTS AI</b></span><span>Brand Proposal — Tezoro</span></div>
+  <div class="label"><span class="n">06</span>Investment</div>
+  <h2>One investment. A complete brand.</h2>
+  <p class="lead">Everything Tezoro needs to launch as a premium brand — designed, built and hosted by one team.</p>
+
+  <div class="kit">
+    <div class="kit-head"><h3>Premium Starter Kit</h3><span class="tag">Recommended for Tezoro</span></div>
+    <div class="line">
+      <div><h4>Website &amp; Brand Identity</h4><p>Premium business website · Brand colours &amp; typography · 3D brand assets &amp; mockups · Professional brand elements · Domain &amp; hosting</p></div>
+      <div class="amt">₹25,000</div>
+    </div>
+    <div class="line">
+      <div><h4>Logo Design</h4><p>Minimalist logo with concepts, revisions and final files for print and digital</p></div>
+      <div class="amt">₹3,000</div>
+    </div>
+    <div class="total">
+      <div><div class="label">Total investment</div><p>One-time · Domain &amp; hosting included</p></div>
+      <div class="amt"><span>₹</span>28,000</div>
+    </div>
+  </div>
+
+  <div class="platform">
+    <div class="label"><span class="n">—</span>Built on a world-class platform</div>
+    <div class="plat">
+      <div><h4>Ready to sell online</h4><p>Switch on orders whenever Tezoro is ready.</p></div>
+      <div><h4>Secure payments</h4><p>UPI, cards and wallets built in.</p></div>
+      <div><h4>Enterprise hosting</h4><p>SSL, speed and high uptime.</p></div>
+      <div><h4>Easy to manage</h4><p>Update anytime, no coding needed.</p></div>
+      <div><h4>Scales with you</h4><p>One boutique today, many tomorrow.</p></div>
+    </div>
+  </div>
+  <div class="ftr"><span>DanRosh Tech Solutions Pvt Ltd</span><span><b>07</b> / 08</span></div>
+</section>
+
+<!-- 08 CONTACT -->
+<section class="page contact">
+  <img class="logo" src="../../proposal/source/logo_dark.png" alt="DARTS AI">
+  <div class="main">
+    <div class="label" style="color:#8C8C8C;margin-bottom:8mm"><span class="n">07</span>Contact</div>
+    <h1>Let's build<br>Tezoro together.</h1>
+    <p class="lead">We'd love to bring the Tezoro vision to life. Reach out and we'll get started.</p>
+  </div>
+  <div class="grid">
+    <div><div class="label">Phone / WhatsApp</div><p>+91 70120 45854</p></div>
+    <div><div class="label">Email</div><p>cto@dartsai.in</p></div>
+    <div><div class="label">Website</div><p>info.dartsai.in</p></div>
+  </div>
+  <div class="co">DARTS AI · DanRosh Tech Solutions Pvt Ltd</div>
+</section>
+
+</body>
+</html>

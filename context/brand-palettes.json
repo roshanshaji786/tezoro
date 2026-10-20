@@ -1,0 +1,20 @@
+{
+  "tezoro_palette_options": [
+    {"id": "A", "name": "Ivory & Antique Gold", "mood": "Timeless luxury for bespoke tailoring",
+     "colors": {"Ivory": "#F5EFE6", "Antique Gold": "#B8893E", "Charcoal": "#2B2B2B"}},
+    {"id": "B", "name": "Midnight Navy & Champagne", "mood": "The confidence of a perfect suit",
+     "colors": {"Midnight Navy": "#14213D", "Champagne": "#D4B483", "Soft White": "#F4F1EA"}},
+    {"id": "C", "name": "Royal Emerald & Gold", "mood": "Regal and celebratory - made for the wedding floor",
+     "colors": {"Royal Emerald": "#0F3D2E", "Gold": "#C9A227", "Cream": "#FAF7F0"}},
+    {"id": "D", "name": "Espresso & Taupe", "mood": "Quiet, tactile luxury - rich, warm and understated",
+     "source": "user mood photo: dark espresso gift bag, taupe arched hang-tag, black grosgrain ribbon, sandstone plinth (not stored: third-party image)",
+     "colors": {"Espresso": "#2E241D", "Taupe": "#BFAE99", "Sandstone": "#E4D9CA"}}
+  ],
+  "logo_direction": "Minimalist serif wordmark TEZORO (ATELIER sub-line) + subtle 'T' monogram",
+  "brochure_design_tokens": {
+    "ink": "#1A1814", "ivory": "#F5EFE6", "paper": "#FBF8F3", "gold": "#B8893E", "gold_light": "#D9B877",
+    "muted": "#6B6358", "line": "#E3D8C6",
+    "fonts": {"headings": "Cormorant Garamond (italic gold for emphasis)", "labels": "Cinzel (letter-spaced caps)", "body": "Inter"},
+    "page": "A4 portrait 210x297mm, 8 pages"
+  }
+}

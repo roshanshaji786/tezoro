@@ -2,6 +2,8 @@
 
 Proposal and quotation from **DARTS AI** (DanRosh Tech Solutions Pvt Ltd) for **Tezoro**, a premium men's tailoring and wedding atelier in Pothencode.
 
+> 🤖 New here (human or AI)? Start with **[HANDOFF.md](HANDOFF.md)**.
+
 **Final PDF:** [`proposal/Tezoro_Brand_Proposal_DARTS_AI.pdf`](proposal/Tezoro_Brand_Proposal_DARTS_AI.pdf), 8 pages, A4
 
 ## Summary
