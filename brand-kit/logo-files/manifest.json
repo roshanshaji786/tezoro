@@ -1,0 +1,530 @@
+[
+ {
+  "svg": "svg/horizontal/tezoro-horizontal-full-colour.svg",
+  "png": "png/horizontal/tezoro-horizontal-full-colour.png",
+  "ratio": 3.4685816876122084,
+  "dark": false
+ },
+ {
+  "svg": "svg/horizontal/tezoro-horizontal-reversed.svg",
+  "png": "png/horizontal/tezoro-horizontal-reversed.png",
+  "ratio": 3.4685816876122084,
+  "dark": true
+ },
+ {
+  "svg": "svg/horizontal/tezoro-horizontal-navy.svg",
+  "png": "png/horizontal/tezoro-horizontal-navy.png",
+  "ratio": 3.4685816876122084,
+  "dark": false
+ },
+ {
+  "svg": "svg/horizontal/tezoro-horizontal-champagne.svg",
+  "png": "png/horizontal/tezoro-horizontal-champagne.png",
+  "ratio": 3.4685816876122084,
+  "dark": true
+ },
+ {
+  "svg": "svg/horizontal/tezoro-horizontal-ivory.svg",
+  "png": "png/horizontal/tezoro-horizontal-ivory.png",
+  "ratio": 3.4685816876122084,
+  "dark": true
+ },
+ {
+  "svg": "svg/horizontal/tezoro-horizontal-black.svg",
+  "png": "png/horizontal/tezoro-horizontal-black.png",
+  "ratio": 3.4685816876122084,
+  "dark": false
+ },
+ {
+  "svg": "svg/horizontal/tezoro-horizontal-white.svg",
+  "png": "png/horizontal/tezoro-horizontal-white.png",
+  "ratio": 3.4685816876122084,
+  "dark": true
+ },
+ {
+  "svg": "svg/stacked/tezoro-stacked-full-colour.svg",
+  "png": "png/stacked/tezoro-stacked-full-colour.png",
+  "ratio": 1.4084016675065283,
+  "dark": false
+ },
+ {
+  "svg": "svg/stacked/tezoro-stacked-reversed.svg",
+  "png": "png/stacked/tezoro-stacked-reversed.png",
+  "ratio": 1.4084016675065283,
+  "dark": true
+ },
+ {
+  "svg": "svg/stacked/tezoro-stacked-navy.svg",
+  "png": "png/stacked/tezoro-stacked-navy.png",
+  "ratio": 1.4084016675065283,
+  "dark": false
+ },
+ {
+  "svg": "svg/stacked/tezoro-stacked-champagne.svg",
+  "png": "png/stacked/tezoro-stacked-champagne.png",
+  "ratio": 1.4084016675065283,
+  "dark": true
+ },
+ {
+  "svg": "svg/stacked/tezoro-stacked-ivory.svg",
+  "png": "png/stacked/tezoro-stacked-ivory.png",
+  "ratio": 1.4084016675065283,
+  "dark": true
+ },
+ {
+  "svg": "svg/stacked/tezoro-stacked-black.svg",
+  "png": "png/stacked/tezoro-stacked-black.png",
+  "ratio": 1.4084016675065283,
+  "dark": false
+ },
+ {
+  "svg": "svg/stacked/tezoro-stacked-white.svg",
+  "png": "png/stacked/tezoro-stacked-white.png",
+  "ratio": 1.4084016675065283,
+  "dark": true
+ },
+ {
+  "svg": "svg/wordmark/tezoro-wordmark-full-colour.svg",
+  "png": "png/wordmark/tezoro-wordmark-full-colour.png",
+  "ratio": 3.4050282423302694,
+  "dark": false
+ },
+ {
+  "svg": "svg/wordmark/tezoro-wordmark-reversed.svg",
+  "png": "png/wordmark/tezoro-wordmark-reversed.png",
+  "ratio": 3.4050282423302694,
+  "dark": true
+ },
+ {
+  "svg": "svg/wordmark/tezoro-wordmark-navy.svg",
+  "png": "png/wordmark/tezoro-wordmark-navy.png",
+  "ratio": 3.4050282423302694,
+  "dark": false
+ },
+ {
+  "svg": "svg/wordmark/tezoro-wordmark-champagne.svg",
+  "png": "png/wordmark/tezoro-wordmark-champagne.png",
+  "ratio": 3.4050282423302694,
+  "dark": true
+ },
+ {
+  "svg": "svg/wordmark/tezoro-wordmark-ivory.svg",
+  "png": "png/wordmark/tezoro-wordmark-ivory.png",
+  "ratio": 3.4050282423302694,
+  "dark": true
+ },
+ {
+  "svg": "svg/wordmark/tezoro-wordmark-black.svg",
+  "png": "png/wordmark/tezoro-wordmark-black.png",
+  "ratio": 3.4050282423302694,
+  "dark": false
+ },
+ {
+  "svg": "svg/wordmark/tezoro-wordmark-white.svg",
+  "png": "png/wordmark/tezoro-wordmark-white.png",
+  "ratio": 3.4050282423302694,
+  "dark": true
+ },
+ {
+  "svg": "svg/wordmark-no-subline/tezoro-wordmark-no-subline-full-colour.svg",
+  "png": "png/wordmark-no-subline/tezoro-wordmark-no-subline-full-colour.png",
+  "ratio": 4.789531079607417,
+  "dark": false
+ },
+ {
+  "svg": "svg/wordmark-no-subline/tezoro-wordmark-no-subline-reversed.svg",
+  "png": "png/wordmark-no-subline/tezoro-wordmark-no-subline-reversed.png",
+  "ratio": 4.789531079607417,
+  "dark": true
+ },
+ {
+  "svg": "svg/wordmark-no-subline/tezoro-wordmark-no-subline-navy.svg",
+  "png": "png/wordmark-no-subline/tezoro-wordmark-no-subline-navy.png",
+  "ratio": 4.789531079607417,
+  "dark": false
+ },
+ {
+  "svg": "svg/wordmark-no-subline/tezoro-wordmark-no-subline-champagne.svg",
+  "png": "png/wordmark-no-subline/tezoro-wordmark-no-subline-champagne.png",
+  "ratio": 4.789531079607417,
+  "dark": true
+ },
+ {
+  "svg": "svg/wordmark-no-subline/tezoro-wordmark-no-subline-ivory.svg",
+  "png": "png/wordmark-no-subline/tezoro-wordmark-no-subline-ivory.png",
+  "ratio": 4.789531079607417,
+  "dark": true
+ },
+ {
+  "svg": "svg/wordmark-no-subline/tezoro-wordmark-no-subline-black.svg",
+  "png": "png/wordmark-no-subline/tezoro-wordmark-no-subline-black.png",
+  "ratio": 4.789531079607417,
+  "dark": false
+ },
+ {
+  "svg": "svg/wordmark-no-subline/tezoro-wordmark-no-subline-white.svg",
+  "png": "png/wordmark-no-subline/tezoro-wordmark-no-subline-white.png",
+  "ratio": 4.789531079607417,
+  "dark": true
+ },
+ {
+  "svg": "svg/symbol/tezoro-symbol-full-colour.svg",
+  "png": "png/symbol/tezoro-symbol-full-colour.png",
+  "ratio": 1.0,
+  "dark": false
+ },
+ {
+  "svg": "svg/symbol/tezoro-symbol-reversed.svg",
+  "png": "png/symbol/tezoro-symbol-reversed.png",
+  "ratio": 1.0,
+  "dark": true
+ },
+ {
+  "svg": "svg/symbol/tezoro-symbol-navy.svg",
+  "png": "png/symbol/tezoro-symbol-navy.png",
+  "ratio": 1.0,
+  "dark": false
+ },
+ {
+  "svg": "svg/symbol/tezoro-symbol-champagne.svg",
+  "png": "png/symbol/tezoro-symbol-champagne.png",
+  "ratio": 1.0,
+  "dark": true
+ },
+ {
+  "svg": "svg/symbol/tezoro-symbol-ivory.svg",
+  "png": "png/symbol/tezoro-symbol-ivory.png",
+  "ratio": 1.0,
+  "dark": true
+ },
+ {
+  "svg": "svg/symbol/tezoro-symbol-black.svg",
+  "png": "png/symbol/tezoro-symbol-black.png",
+  "ratio": 1.0,
+  "dark": false
+ },
+ {
+  "svg": "svg/symbol/tezoro-symbol-white.svg",
+  "png": "png/symbol/tezoro-symbol-white.png",
+  "ratio": 1.0,
+  "dark": true
+ },
+ {
+  "svg": "svg/symbol-small-cut/tezoro-symbol-small-cut-full-colour.svg",
+  "png": "png/symbol-small-cut/tezoro-symbol-small-cut-full-colour.png",
+  "ratio": 1.0,
+  "dark": false
+ },
+ {
+  "svg": "svg/symbol-small-cut/tezoro-symbol-small-cut-reversed.svg",
+  "png": "png/symbol-small-cut/tezoro-symbol-small-cut-reversed.png",
+  "ratio": 1.0,
+  "dark": true
+ },
+ {
+  "svg": "svg/symbol-small-cut/tezoro-symbol-small-cut-navy.svg",
+  "png": "png/symbol-small-cut/tezoro-symbol-small-cut-navy.png",
+  "ratio": 1.0,
+  "dark": false
+ },
+ {
+  "svg": "svg/symbol-small-cut/tezoro-symbol-small-cut-champagne.svg",
+  "png": "png/symbol-small-cut/tezoro-symbol-small-cut-champagne.png",
+  "ratio": 1.0,
+  "dark": true
+ },
+ {
+  "svg": "svg/symbol-small-cut/tezoro-symbol-small-cut-ivory.svg",
+  "png": "png/symbol-small-cut/tezoro-symbol-small-cut-ivory.png",
+  "ratio": 1.0,
+  "dark": true
+ },
+ {
+  "svg": "svg/symbol-small-cut/tezoro-symbol-small-cut-black.svg",
+  "png": "png/symbol-small-cut/tezoro-symbol-small-cut-black.png",
+  "ratio": 1.0,
+  "dark": false
+ },
+ {
+  "svg": "svg/symbol-small-cut/tezoro-symbol-small-cut-white.svg",
+  "png": "png/symbol-small-cut/tezoro-symbol-small-cut-white.png",
+  "ratio": 1.0,
+  "dark": true
+ },
+ {
+  "svg": "svg/monogram/tezoro-monogram-full-colour.svg",
+  "png": "png/monogram/tezoro-monogram-full-colour.png",
+  "ratio": 1.0,
+  "dark": false
+ },
+ {
+  "svg": "svg/monogram/tezoro-monogram-reversed.svg",
+  "png": "png/monogram/tezoro-monogram-reversed.png",
+  "ratio": 1.0,
+  "dark": true
+ },
+ {
+  "svg": "svg/monogram/tezoro-monogram-navy.svg",
+  "png": "png/monogram/tezoro-monogram-navy.png",
+  "ratio": 1.0,
+  "dark": false
+ },
+ {
+  "svg": "svg/monogram/tezoro-monogram-champagne.svg",
+  "png": "png/monogram/tezoro-monogram-champagne.png",
+  "ratio": 1.0,
+  "dark": true
+ },
+ {
+  "svg": "svg/monogram/tezoro-monogram-ivory.svg",
+  "png": "png/monogram/tezoro-monogram-ivory.png",
+  "ratio": 1.0,
+  "dark": true
+ },
+ {
+  "svg": "svg/monogram/tezoro-monogram-black.svg",
+  "png": "png/monogram/tezoro-monogram-black.png",
+  "ratio": 1.0,
+  "dark": false
+ },
+ {
+  "svg": "svg/monogram/tezoro-monogram-white.svg",
+  "png": "png/monogram/tezoro-monogram-white.png",
+  "ratio": 1.0,
+  "dark": true
+ },
+ {
+  "svg": "svg/monogram-small-cut/tezoro-monogram-small-cut-full-colour.svg",
+  "png": "png/monogram-small-cut/tezoro-monogram-small-cut-full-colour.png",
+  "ratio": 1.0,
+  "dark": false
+ },
+ {
+  "svg": "svg/monogram-small-cut/tezoro-monogram-small-cut-reversed.svg",
+  "png": "png/monogram-small-cut/tezoro-monogram-small-cut-reversed.png",
+  "ratio": 1.0,
+  "dark": true
+ },
+ {
+  "svg": "svg/monogram-small-cut/tezoro-monogram-small-cut-navy.svg",
+  "png": "png/monogram-small-cut/tezoro-monogram-small-cut-navy.png",
+  "ratio": 1.0,
+  "dark": false
+ },
+ {
+  "svg": "svg/monogram-small-cut/tezoro-monogram-small-cut-champagne.svg",
+  "png": "png/monogram-small-cut/tezoro-monogram-small-cut-champagne.png",
+  "ratio": 1.0,
+  "dark": true
+ },
+ {
+  "svg": "svg/monogram-small-cut/tezoro-monogram-small-cut-ivory.svg",
+  "png": "png/monogram-small-cut/tezoro-monogram-small-cut-ivory.png",
+  "ratio": 1.0,
+  "dark": true
+ },
+ {
+  "svg": "svg/monogram-small-cut/tezoro-monogram-small-cut-black.svg",
+  "png": "png/monogram-small-cut/tezoro-monogram-small-cut-black.png",
+  "ratio": 1.0,
+  "dark": false
+ },
+ {
+  "svg": "svg/monogram-small-cut/tezoro-monogram-small-cut-white.svg",
+  "png": "png/monogram-small-cut/tezoro-monogram-small-cut-white.png",
+  "ratio": 1.0,
+  "dark": true
+ },
+ {
+  "svg": "svg/seal/tezoro-seal-full-colour.svg",
+  "png": "png/seal/tezoro-seal-full-colour.png",
+  "ratio": 1.0,
+  "dark": false
+ },
+ {
+  "svg": "svg/seal/tezoro-seal-reversed.svg",
+  "png": "png/seal/tezoro-seal-reversed.png",
+  "ratio": 1.0,
+  "dark": true
+ },
+ {
+  "svg": "svg/seal/tezoro-seal-navy.svg",
+  "png": "png/seal/tezoro-seal-navy.png",
+  "ratio": 1.0,
+  "dark": false
+ },
+ {
+  "svg": "svg/seal/tezoro-seal-champagne.svg",
+  "png": "png/seal/tezoro-seal-champagne.png",
+  "ratio": 1.0,
+  "dark": true
+ },
+ {
+  "svg": "svg/seal/tezoro-seal-ivory.svg",
+  "png": "png/seal/tezoro-seal-ivory.png",
+  "ratio": 1.0,
+  "dark": true
+ },
+ {
+  "svg": "svg/seal/tezoro-seal-black.svg",
+  "png": "png/seal/tezoro-seal-black.png",
+  "ratio": 1.0,
+  "dark": false
+ },
+ {
+  "svg": "svg/seal/tezoro-seal-white.svg",
+  "png": "png/seal/tezoro-seal-white.png",
+  "ratio": 1.0,
+  "dark": true
+ },
+ {
+  "svg": "svg/signature/tezoro-signature-full-colour.svg",
+  "png": "png/signature/tezoro-signature-full-colour.png",
+  "ratio": 2.40255905511811,
+  "dark": false
+ },
+ {
+  "svg": "svg/signature/tezoro-signature-reversed.svg",
+  "png": "png/signature/tezoro-signature-reversed.png",
+  "ratio": 2.40255905511811,
+  "dark": true
+ },
+ {
+  "svg": "svg/signature/tezoro-signature-navy.svg",
+  "png": "png/signature/tezoro-signature-navy.png",
+  "ratio": 2.40255905511811,
+  "dark": false
+ },
+ {
+  "svg": "svg/signature/tezoro-signature-champagne.svg",
+  "png": "png/signature/tezoro-signature-champagne.png",
+  "ratio": 2.40255905511811,
+  "dark": true
+ },
+ {
+  "svg": "svg/signature/tezoro-signature-ivory.svg",
+  "png": "png/signature/tezoro-signature-ivory.png",
+  "ratio": 2.40255905511811,
+  "dark": true
+ },
+ {
+  "svg": "svg/signature/tezoro-signature-black.svg",
+  "png": "png/signature/tezoro-signature-black.png",
+  "ratio": 2.40255905511811,
+  "dark": false
+ },
+ {
+  "svg": "svg/signature/tezoro-signature-white.svg",
+  "png": "png/signature/tezoro-signature-white.png",
+  "ratio": 2.40255905511811,
+  "dark": true
+ },
+ {
+  "svg": "svg/wedding-horizontal/tezoro-wedding-horizontal-full-colour.svg",
+  "png": "png/wedding-horizontal/tezoro-wedding-horizontal-full-colour.png",
+  "ratio": 3.4685816876122084,
+  "dark": false
+ },
+ {
+  "svg": "svg/wedding-horizontal/tezoro-wedding-horizontal-reversed.svg",
+  "png": "png/wedding-horizontal/tezoro-wedding-horizontal-reversed.png",
+  "ratio": 3.4685816876122084,
+  "dark": true
+ },
+ {
+  "svg": "svg/wedding-horizontal/tezoro-wedding-horizontal-navy.svg",
+  "png": "png/wedding-horizontal/tezoro-wedding-horizontal-navy.png",
+  "ratio": 3.4685816876122084,
+  "dark": false
+ },
+ {
+  "svg": "svg/wedding-horizontal/tezoro-wedding-horizontal-champagne.svg",
+  "png": "png/wedding-horizontal/tezoro-wedding-horizontal-champagne.png",
+  "ratio": 3.4685816876122084,
+  "dark": true
+ },
+ {
+  "svg": "svg/wedding-horizontal/tezoro-wedding-horizontal-ivory.svg",
+  "png": "png/wedding-horizontal/tezoro-wedding-horizontal-ivory.png",
+  "ratio": 3.4685816876122084,
+  "dark": true
+ },
+ {
+  "svg": "svg/wedding-horizontal/tezoro-wedding-horizontal-black.svg",
+  "png": "png/wedding-horizontal/tezoro-wedding-horizontal-black.png",
+  "ratio": 3.4685816876122084,
+  "dark": false
+ },
+ {
+  "svg": "svg/wedding-horizontal/tezoro-wedding-horizontal-white.svg",
+  "png": "png/wedding-horizontal/tezoro-wedding-horizontal-white.png",
+  "ratio": 3.4685816876122084,
+  "dark": true
+ },
+ {
+  "svg": "svg/wedding-horizontal/tezoro-wedding-horizontal-wedding-maroon.svg",
+  "png": "png/wedding-horizontal/tezoro-wedding-horizontal-wedding-maroon.png",
+  "ratio": 3.4685816876122084,
+  "dark": false
+ },
+ {
+  "svg": "svg/wedding-stacked/tezoro-wedding-stacked-full-colour.svg",
+  "png": "png/wedding-stacked/tezoro-wedding-stacked-full-colour.png",
+  "ratio": 1.4084016675065283,
+  "dark": false
+ },
+ {
+  "svg": "svg/wedding-stacked/tezoro-wedding-stacked-reversed.svg",
+  "png": "png/wedding-stacked/tezoro-wedding-stacked-reversed.png",
+  "ratio": 1.4084016675065283,
+  "dark": true
+ },
+ {
+  "svg": "svg/wedding-stacked/tezoro-wedding-stacked-navy.svg",
+  "png": "png/wedding-stacked/tezoro-wedding-stacked-navy.png",
+  "ratio": 1.4084016675065283,
+  "dark": false
+ },
+ {
+  "svg": "svg/wedding-stacked/tezoro-wedding-stacked-champagne.svg",
+  "png": "png/wedding-stacked/tezoro-wedding-stacked-champagne.png",
+  "ratio": 1.4084016675065283,
+  "dark": true
+ },
+ {
+  "svg": "svg/wedding-stacked/tezoro-wedding-stacked-ivory.svg",
+  "png": "png/wedding-stacked/tezoro-wedding-stacked-ivory.png",
+  "ratio": 1.4084016675065283,
+  "dark": true
+ },
+ {
+  "svg": "svg/wedding-stacked/tezoro-wedding-stacked-black.svg",
+  "png": "png/wedding-stacked/tezoro-wedding-stacked-black.png",
+  "ratio": 1.4084016675065283,
+  "dark": false
+ },
+ {
+  "svg": "svg/wedding-stacked/tezoro-wedding-stacked-white.svg",
+  "png": "png/wedding-stacked/tezoro-wedding-stacked-white.png",
+  "ratio": 1.4084016675065283,
+  "dark": true
+ },
+ {
+  "svg": "svg/wedding-stacked/tezoro-wedding-stacked-wedding-maroon.svg",
+  "png": "png/wedding-stacked/tezoro-wedding-stacked-wedding-maroon.png",
+  "ratio": 1.4084016675065283,
+  "dark": false
+ },
+ {
+  "svg": "svg/app-icon/tezoro-app-icon.svg",
+  "png": "png/app-icon/tezoro-app-icon.png",
+  "ratio": 1,
+  "dark": false
+ },
+ {
+  "svg": "svg/app-icon/tezoro-profile-picture.svg",
+  "png": "png/app-icon/tezoro-profile-picture.png",
+  "ratio": 1,
+  "dark": false
+ }
+]

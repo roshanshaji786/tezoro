@@ -1,0 +1,137 @@
+{
+ "palette": [
+  {
+   "name": "Midnight Navy",
+   "hex": "#14213D",
+   "rgb": [
+    20,
+    33,
+    61
+   ],
+   "cmyk_approx": [
+    67,
+    46,
+    0,
+    76
+   ],
+   "role": "Primary"
+  },
+  {
+   "name": "Champagne",
+   "hex": "#D4B483",
+   "rgb": [
+    212,
+    180,
+    131
+   ],
+   "cmyk_approx": [
+    0,
+    15,
+    38,
+    17
+   ],
+   "role": "Accent"
+  },
+  {
+   "name": "Soft Ivory",
+   "hex": "#F4F1EA",
+   "rgb": [
+    244,
+    241,
+    234
+   ],
+   "cmyk_approx": [
+    0,
+    1,
+    4,
+    4
+   ],
+   "role": "Base"
+  },
+  {
+   "name": "Antique Gold",
+   "hex": "#B8893E",
+   "rgb": [
+    184,
+    137,
+    62
+   ],
+   "cmyk_approx": [
+    0,
+    26,
+    66,
+    28
+   ],
+   "role": "Accent on light"
+  },
+  {
+   "name": "Deep Ink",
+   "hex": "#0D1526",
+   "rgb": [
+    13,
+    21,
+    38
+   ],
+   "cmyk_approx": [
+    66,
+    45,
+    0,
+    85
+   ],
+   "role": "Text"
+  },
+  {
+   "name": "Taupe Stone",
+   "hex": "#BFAE99",
+   "rgb": [
+    191,
+    174,
+    153
+   ],
+   "cmyk_approx": [
+    0,
+    9,
+    20,
+    25
+   ],
+   "role": "Neutral"
+  },
+  {
+   "name": "Sandstone",
+   "hex": "#E4D9CA",
+   "rgb": [
+    228,
+    217,
+    202
+   ],
+   "cmyk_approx": [
+    0,
+    5,
+    11,
+    11
+   ],
+   "role": "Neutral"
+  },
+  {
+   "name": "Wedding Maroon",
+   "hex": "#5A1A24",
+   "rgb": [
+    90,
+    26,
+    36
+   ],
+   "cmyk_approx": [
+    0,
+    71,
+    60,
+    65
+   ],
+   "role": "Sub-brand"
+  }
+ ],
+ "fonts": {
+  "display": "Cormorant Garamond",
+  "labels": "Cinzel",
+  "body": "Inter"
+ }
+}

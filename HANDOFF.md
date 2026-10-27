@@ -135,6 +135,13 @@ Gotchas (Chromium → PDF):
 - Cinzel variable font can mis-render "Z" at some sizes; Cormorant uppercase is the safe wordmark font.
 - Each page is a fixed 210×297mm `<section class="page">`; content overflowing into the footer is the usual failure — re-render and check page 7 especially.
 
+## 8b. Brand kit (added 2026-10-27)
+
+`brand-kit/` holds the client-facing identity built after the proposal: 39-slide guidelines PDF,
+10-page Tezoro company profile PDF, and an outlined SVG/PNG logo pack. Direction used pending the
+client's choice: needle-button symbol (sketch G) + TEZORO/ATELIER wordmark, navy #14213D + champagne
+#D4B483 + ivory, maroon #5A1A24 for the Tezoro Wedding sub-brand. See `brand-kit/README.md` to rebuild.
+
 ## 9. Open items / next steps
 
 - [ ] Send PDF to Mr. Safnal; get palette choice (A/B/C/D).
