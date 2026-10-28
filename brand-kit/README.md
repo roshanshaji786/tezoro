@@ -12,7 +12,7 @@ Direction used (client has not chosen yet): **G · Needle button** symbol + TEZO
 palette **B Midnight Navy & Champagne** with ivory, plus maroon for the wedding floor.
 All colours live in `source/common.py`; change them there and rebuild to re-colour everything.
 
-Placeholders to confirm with the client: phone (+91 00000 00000), `tezoro.in`, `@tezoro.atelier`,
+Phone: +91 96335 98100 (Mr. Safnal). Placeholders to confirm with the client: `tezoro.in`, `@tezoro.atelier`,
 opening hours, "Safnal · Founder" title, sample client names/orders on mockups.
 
 ## Build

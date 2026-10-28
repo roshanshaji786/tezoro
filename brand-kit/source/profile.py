@@ -199,7 +199,7 @@ page(f'''
       {''.join(f'<div style="display:grid;grid-template-columns:34px 1fr;gap:14px">{icon(i, 26, GOLD)}<div><div class="caps" style="font-size:10px">{a}</div><div class="serif" style="font-size:19px;line-height:1.35;margin-top:4px">{b}</div></div></div>' for i,a,b in [
         ('pin','Address','Tezoro Atelier<br>Near Zudio, Pothencode<br>Thiruvananthapuram, Kerala'),
         ('clock','Hours','Monday to Saturday, 10 am – 9 pm<br>Sunday by appointment'),
-        ('chat','Call or WhatsApp','+91 00000 00000'),
+        ('chat','Call or WhatsApp','+91 96335 98100'),
         ('calendar','Online','tezoro.in · @tezoro.atelier')])}
     </div>
     <div class="navy" style="position:relative;height:420px;overflow:hidden">

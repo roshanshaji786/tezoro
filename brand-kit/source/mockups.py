@@ -291,14 +291,14 @@ def bcard_back(w=420):
     <div style="display:flex;justify-content:space-between;align-items:start">
       <div><div class="serif" style="font-size:{w*.075}px;line-height:1">Safnal</div><div class="caps" style="font-size:{w*.022}px;color:{GOLD};margin-top:8px">Founder</div></div>
       {L.inline(L.symbol, height=w*.09, c=NAVY)}</div>
-    <div style="font-size:{w*.027}px;line-height:1.7">+91 00000 00000<br>hello@tezoro.in · tezoro.in<br>Near Zudio, Pothencode, Thiruvananthapuram</div></div>'''
+    <div style="font-size:{w*.027}px;line-height:1.7">+91 96335 98100<br>hello@tezoro.in · tezoro.in<br>Near Zudio, Pothencode, Thiruvananthapuram</div></div>'''
 
 
 def letterhead(w=440):
     h = w * 1.414
     return f'''<div class="shadow" style="width:{w}px;height:{h}px;background:#FDFBF6 url('{noise(.04)}');padding:{w*.09}px;position:relative;color:{INK}">
    <div style="display:flex;justify-content:space-between;align-items:center">{L.inline(L.horizontal, width=w*.42, c1=NAVY, c2=GOLD)}
-     <div style="font-size:{w*.019}px;text-align:right;line-height:1.6;color:{MUTED}">Near Zudio, Pothencode<br>Thiruvananthapuram, Kerala<br>+91 00000 00000</div></div>
+     <div style="font-size:{w*.019}px;text-align:right;line-height:1.6;color:{MUTED}">Near Zudio, Pothencode<br>Thiruvananthapuram, Kerala<br>+91 96335 98100</div></div>
    <div style="height:1px;background:{GOLD};margin:{w*.05}px 0;opacity:.6"></div>
    <div style="font-size:{w*.022}px;line-height:1.8;color:{MUTED}">27 October 2026<br><br><span style="color:{INK}">Dear Mr. Arun,</span><br><br>
    {''.join(f'<div style="height:{w*.012}px;background:#E9E3D8;margin:{w*.022}px 0;width:{x}%"></div>' for x in [100,96,100,88,100,92,60])}
