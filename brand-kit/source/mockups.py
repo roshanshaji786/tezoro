@@ -545,3 +545,106 @@ def wedding_scene():
     <div style="margin-top:40px">{L.inline(L.horizontal, width=380, c1=IVORY, c2=CHAMP, subtext='WEDDING')}</div></div>
   <div style="position:absolute;left:600px;top:210px">{box}</div>
   <div style="position:absolute;left:1150px;top:170px">{invite}</div>'''
+
+
+# ---------------------------------------------------------------- email + app
+def email_app_scene():
+    sig = f'''<div style="border-top:1px solid #E5E5E5;padding-top:22px;margin-top:26px;display:grid;grid-template-columns:auto 1fr;gap:24px;align-items:center">
+      <div style="padding-right:24px;border-right:1px solid {GOLD}">{L.inline(L.stacked, height=86, c1=NAVY, c2=GOLD)}</div>
+      <div style="font-size:12.5px;line-height:1.6;color:#4A4A55">
+        <div class="serif" style="font-size:24px;color:{NAVY};line-height:1">Safnal</div>
+        <div class="caps" style="font-size:9px;color:{GOLD};margin:4px 0 8px">Founder · Tezoro Atelier</div>
+        +91 96335 98100 · <span style="color:{NAVY}">tezoro.in</span><br>Near Zudio, Pothencode, Thiruvananthapuram</div></div>
+     <div style="margin-top:16px;height:2px;background:repeating-linear-gradient(90deg,{GOLD} 0 10px,transparent 10px 16px);opacity:.7"></div>
+     <div style="font-size:10px;color:#9A9AA3;margin-top:10px">Made for you, only you. · Appointments by WhatsApp</div>'''
+    mail = f'''<div class="shadow" style="width:720px;background:#fff;border-radius:10px;overflow:hidden">
+     <div style="height:38px;background:#F1F1F3;display:flex;align-items:center;gap:8px;padding:0 16px">
+       {''.join(f'<span style="width:11px;height:11px;border-radius:50%;background:{c}"></span>' for c in ('#D9D9DD','#D9D9DD','#D9D9DD'))}
+       <span style="margin-left:16px;font-size:11px;color:#777">Your second fitting is confirmed</span></div>
+     <div style="padding:28px 36px 30px;font-size:13.5px;line-height:1.65;color:#2A2A33">
+       <div style="font-size:11.5px;color:#888;border-bottom:1px solid #EEE;padding-bottom:12px;margin-bottom:18px">From: <b style="color:#333">Tezoro Atelier</b> &lt;hello@tezoro.in&gt;<br>To: Arun Nair</div>
+       Dear Mr. Arun,<br><br>Your second fitting for the two-piece suit is confirmed for <b>Saturday, 7 November at 11:30 am</b>. Please bring the shoes you plan to wear with it, so we can set the trouser length exactly.<br><br>Warm regards,
+       {sig}</div></div>'''
+    slots = ''.join(f'<div style="border:1px solid {NAVY if s else LINE};background:{NAVY if s else "#fff"};color:{IVORY if s else INK};padding:9px 0;text-align:center;font-size:10.5px">{t}</div>'
+                    for t, s in [('10:30', 0), ('11:30', 1), ('12:30', 0), ('4:00', 0), ('5:30', 0), ('7:00', 0)])
+    days = ''.join(f'<div style="text-align:center;padding:8px 0;{"background:"+NAVY+";color:"+IVORY if s else ""}"><div style="font-size:8px;letter-spacing:.1em;opacity:.7">{d}</div><div class="serif" style="font-size:20px">{n}</div></div>'
+                   for d, n, s in [('THU', 5, 0), ('FRI', 6, 0), ('SAT', 7, 1), ('SUN', 8, 0), ('MON', 9, 0)])
+    book = f'''<div style="height:100%;background:{IVORY};font-size:10px;color:{INK};position:relative">
+      <div style="height:34px"></div>
+      <div style="display:flex;justify-content:space-between;align-items:center;padding:6px 18px">{L.inline(L.symbol, height=24, c=NAVY)}<span class="caps" style="font-size:8.5px">Book a fitting</span><span style="width:24px"></span></div>
+      <div style="padding:14px 18px 0"><div class="eyebrow" style="font-size:8px">Step 2 of 3</div>
+        <div class="serif" style="font-size:28px;line-height:1.05;margin-top:6px">Choose a <em style="color:{GOLD}">time.</em></div></div>
+      <div style="margin:16px 18px 0;padding:12px 14px;background:#fff;border:1px solid {LINE};display:flex;gap:12px;align-items:center">{icon('jacket', 26, NAVY)}<div><div class="serif" style="font-size:16px">Second fitting</div><div style="font-size:9px;color:{MUTED}">Two-piece suit · TZ-0147 · 30 min</div></div></div>
+      <div class="caps" style="font-size:8px;margin:18px 18px 8px;color:{MUTED}">November</div>
+      <div style="display:grid;grid-template-columns:repeat(5,1fr);margin:0 18px;border:1px solid {LINE};background:#fff">{days}</div>
+      <div class="caps" style="font-size:8px;margin:18px 18px 8px;color:{MUTED}">Available</div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin:0 18px">{slots}</div>
+      <div style="position:absolute;left:18px;right:18px;bottom:30px"><div class="caps" style="background:{NAVY};color:{IVORY};text-align:center;padding:14px;font-size:9px">Confirm Sat 7 Nov · 11:30</div></div></div>'''
+    steps = [('Measured', '12 Oct', 1), ('Cloth cut', '18 Oct', 1), ('First fitting', '27 Oct', 1), ('Second fitting', '7 Nov', 0), ('Ready to collect', 'Mid Nov', 0)]
+    track = f'''<div style="height:100%;background:{NAVY};color:{IVORY};font-size:10px;position:relative">
+      <div style="height:34px"></div>
+      <div style="padding:6px 18px;display:flex;justify-content:space-between;align-items:center"><span class="caps" style="font-size:8.5px;color:{CHAMP}">My garments</span>{L.inline(L.symbol, height=22, c=CHAMP)}</div>
+      <div style="margin:14px 18px 0;height:150px;background:{pattern_pinstitch(CHAMP, '#1B2A4C', 18, .3)};display:flex;align-items:center;justify-content:center;border:1px solid rgba(212,180,131,.3)">{jacket_art(80, CHAMP, 2.2)}</div>
+      <div style="padding:14px 18px 0"><div class="serif" style="font-size:24px;line-height:1">Two-piece suit</div><div style="font-size:9px;opacity:.65;margin-top:4px">Navy wool twill · No. TZ-0147</div></div>
+      <div style="margin:16px 18px 0;position:relative">
+        <div style="position:absolute;left:6px;top:8px;bottom:8px;border-left:1.5px dashed rgba(212,180,131,.5)"></div>
+        {''.join(f'<div style="display:flex;justify-content:space-between;align-items:center;padding:7px 0 7px 22px;position:relative"><span style="position:absolute;left:0;width:13px;height:13px;border-radius:50%;background:{CHAMP if d else NAVY};border:1.5px solid {CHAMP}"></span><span class="serif" style="font-size:15px;opacity:{1 if d else .6}">{a}</span><span style="font-size:9px;opacity:.6">{b}</span></div>' for a,b,d in steps)}
+      </div>
+      <div style="position:absolute;left:18px;right:18px;bottom:30px"><div class="caps" style="border:1px solid {CHAMP};color:{CHAMP};text-align:center;padding:13px;font-size:9px">Message your cutter</div></div></div>'''
+    return mail, book, track
+
+
+def email_scene():
+    mail, _, _ = email_app_scene()
+    return f'''<div class="pad" style="right:auto;width:400px">{text_block('Email signature', 'The same calm, <em>in every inbox.</em>', 'An HTML signature with the stacked logo, a gold rule and full contact details. Plain-text fallback: name, title, phone and website on four lines.', 380)}</div>
+  <div style="position:absolute;left:620px;top:130px;transform:scale(1.18);transform-origin:top left">{mail}</div>'''
+
+
+def app_scene():
+    _, book, track = email_app_scene()
+    return f'''<div class="pad" style="right:auto;width:420px">{text_block('Mobile app', 'Fittings, <em>in your pocket.</em>', 'A booking app or mobile web page in the same system: ivory screens for choosing, navy screens for following each garment from measurement to collection.', 400)}</div>
+  <div style="position:absolute;left:700px;top:96px">{phone(330, book)}</div>
+  <div style="position:absolute;left:1110px;top:96px">{phone(330, track)}</div>'''
+
+
+def photo_frame(kind, w, h):
+    light = 'linear-gradient(115deg,rgba(255,244,220,.38) 0%,rgba(255,244,220,.08) 35%,rgba(0,0,0,.35) 100%)'
+    if kind == 'cloth':
+        return f'<div class="suiting" style="width:{w}px;height:{h}px;position:relative;overflow:hidden"><div style="position:absolute;inset:0;background:{light}"></div><div style="position:absolute;left:-10%;right:-10%;top:58%;height:30%;background:linear-gradient(170deg,rgba(0,0,0,0),rgba(0,0,0,.35));transform:rotate(-8deg)"></div></div>'
+    if kind == 'hands':
+        return f'''<div class="shirting" style="width:{w}px;height:{h}px;position:relative;overflow:hidden"><div style="position:absolute;inset:0;background:linear-gradient(120deg,rgba(255,250,240,.6),rgba(0,0,0,.12))"></div>
+          <svg viewBox="0 0 200 260" width="{w}" height="{h}" style="position:absolute;inset:0" preserveAspectRatio="xMidYMid slice"><path d="M40 230 C70 160 120 190 150 120 C170 75 140 40 120 30" fill="none" stroke="{NAVY}" stroke-width="1.4" opacity=".7"/>
+          <g transform="rotate(-35 120 60)"><rect x="117" y="20" width="5" height="90" rx="2.5" fill="url(#chrome)"/><ellipse cx="119.5" cy="30" rx="1.2" ry="5" fill="#ddd"/></g>
+          <path d="M126 140 l3 2 M132 150 l3 2 M138 160 l3 2" stroke="{NAVY}" stroke-width="1.2" opacity=".5"/></svg></div>'''
+    if kind == 'fitting':
+        return f'''<div class="sand" style="width:{w}px;height:{h}px;position:relative;display:flex;align-items:end;justify-content:center;overflow:hidden">
+          <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 30% 0%,rgba(255,248,232,.85),rgba(0,0,0,.1) 80%)"></div>
+          <div style="position:relative;width:{w*.62}px;height:{h*.8}px;border-radius:{w*.31}px {w*.31}px 0 0;background:{NAVY};display:flex;align-items:center;justify-content:center">{jacket_art(w*.38, CHAMP, 2.2)}</div></div>'''
+    if kind == 'detail':
+        return f'''<div style="width:{w}px;height:{h}px;background:#2A2018 url('{noise(.2, .9)}');position:relative;display:flex;align-items:center;justify-content:center">
+          <div style="position:absolute;inset:0;background:radial-gradient(circle at 35% 30%,rgba(255,235,200,.25),rgba(0,0,0,.55) 75%)"></div>
+          <svg viewBox="0 0 200 200" width="{w*.5}" height="{w*.5}" style="position:relative;filter:drop-shadow(0 8px 10px rgba(0,0,0,.5))"><circle cx="100" cy="100" r="94" fill="url(#horn)"/>
+          <circle cx="100" cy="100" r="80" fill="none" stroke="rgba(255,255,255,.07)" stroke-width="6"/>{''.join(f'<circle cx="{x}" cy="{y}" r="9" fill="#0E0A08"/>' for x,y in [(80,80),(120,80),(80,120),(120,120)])}</svg></div>'''
+    if kind == 'wedding':
+        return f'''<div style="width:{w}px;height:{h}px;background:{pattern_arch(CHAMP, MAROON, 60)};position:relative">
+          <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 70% 10%,rgba(255,220,160,.45),rgba(40,8,14,.6) 75%)"></div></div>'''
+
+
+def photography_scene():
+    frames = [('cloth', 'Cloth in daylight', 'Raking window light shows the weave.'),
+              ('hands', 'Hands at work', 'Needle, chalk and tape, close and quiet.'),
+              ('fitting', 'The fitting', 'Real clients, framed in the arch.'),
+              ('detail', 'Details', 'Buttons, cuffs and linings, shot macro.'),
+              ('wedding', 'The wedding floor', 'Warm gold light, deep shadows.')]
+    tiles = ''.join(f'<div>{photo_frame(k, 232, 330)}<div class="caps" style="font-size:10.5px;margin-top:12px;font-weight:600">{a}</div><div class="small" style="font-size:12px;margin-top:3px">{b}</div></div>' for k, a, b in frames)
+    rules = [('Light', 'Natural and directional, from a window or a single soft source. Never flash.'),
+             ('Colour', 'Muted, warm tones that sit beside navy and ivory. No heavy filters.'),
+             ('Composition', 'One subject, lots of space. Leave room for a headline.'),
+             ('Truth', 'Real cloth, real clients and the real atelier. No stock images or other brands.')]
+    return f'''<div class="pad" style="top:100px">
+    <div style="display:flex;justify-content:space-between;align-items:end">
+      <div><div class="eyebrow">Photography direction</div><h2>Quiet light, <em>real craft.</em></h2></div>
+      <div class="small" style="width:430px;font-size:13px">These frames are composition references for the shoot. Replace them with Tezoro's own photography; keep the light, the crop and the calm.</div></div>
+    <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-top:30px">{tiles}</div>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:30px;border-top:1px solid {LINE};padding-top:18px">
+      {''.join(f'<div><div class="caps" style="font-size:10.5px;color:{GOLD};font-weight:600">{a}</div><div class="small" style="font-size:12.5px;margin-top:5px">{b}</div></div>' for a,b in rules)}</div></div>'''

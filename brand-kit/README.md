@@ -4,7 +4,7 @@ Client-facing brand identity for Tezoro (built by DARTS AI after the proposal).
 
 | File | What it is |
 |---|---|
-| `Tezoro_Brand_Guidelines.pdf` | 39-slide 16:9 brand guidelines presentation: foundation, logo suite, fabric/production specs, colour, type, patterns, icons, mockups, Tezoro Wedding sub-brand |
+| `Tezoro_Brand_Guidelines.pdf` | 46-slide 16:9 brand guidelines presentation: overview, foundation, logo on four grounds, logo suite, do and don't, fabric/production specs, colour, type, patterns, icons, photography direction, mockups incl. email signature and mobile app, Tezoro Wedding sub-brand |
 | `Tezoro_Company_Profile.pdf` | 10-page A4 company profile for Tezoro, in the new identity |
 | `logo-files/` | Outlined SVG + transparent PNG (2400 px) for 12 logo forms in 7 colourways, app icon, profile picture, `tezoro-colours.css/json` |
 

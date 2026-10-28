@@ -35,6 +35,7 @@ h3{{font-family:Cinz;font-size:14px;letter-spacing:.24em;text-transform:uppercas
 .x{{position:absolute;top:10px;right:10px;width:26px;height:26px;border-radius:50%;background:{MAROON};color:#fff;
   font-size:15px;display:flex;align-items:center;justify-content:center;font-weight:600}}
 .tick{{background:{NAVY}}}
+.ok{{position:absolute;top:10px;right:10px;width:26px;height:26px;border-radius:50%;background:{NAVY};color:#fff;font-size:14px;display:flex;align-items:center;justify-content:center;font-weight:600;box-shadow:0 0 0 2px #fff}}
 """
 
 
@@ -69,6 +70,30 @@ slide(f'''
 ''', 'navy', chrome=False, foot=False)
 
 # =====================================================================
+# OVERVIEW
+# =====================================================================
+slide(f"""
+<div style="position:absolute;inset:0;display:grid;grid-template-columns:1fr 1fr">
+ <div class="navy" style="position:relative;display:flex;align-items:center;justify-content:center">
+   <div style="position:absolute;inset:0;background:{pattern_pinstitch(CHAMP, NAVY, 22, .16)}"></div>
+   <div style="position:absolute;left:72px;top:44px;font-family:Cinz;font-size:11.5px;letter-spacing:.3em;opacity:.6">TEZORO · BRAND GUIDELINES</div>
+   <div style="position:relative">{L.inline(L.stacked, height=330, c1=IVORY, c2=CHAMP)}</div>
+   <div style="position:absolute;left:72px;bottom:38px;font-size:11px;letter-spacing:.14em;opacity:.5">MADE FOR YOU, ONLY YOU.</div></div>
+ <div class="paper" style="position:relative;padding:0 80px;display:flex;flex-direction:column;justify-content:center">
+   <div class="eyebrow">Brand overview</div>
+   <h2>Tezoro <em>Atelier</em></h2>
+   <div class="serif it" style="font-size:30px;margin-top:12px;color:{NAVY}">Made for you, only you.</div>
+   <p class="lead" style="max-width:600px">A premium men's tailoring house and wedding atelier in Pothencode, Thiruvananthapuram. Every garment is measured, cut and finished for one client, so no two men ever wear the same piece.</p>
+   <div style="display:grid;grid-template-columns:1fr 1fr;gap:0 40px;margin-top:34px;border-top:1px solid {LINE}">
+    {''.join(f'<div style="padding:16px 0;border-bottom:1px solid {LINE}"><div class="serif" style="font-size:26px;line-height:1">{a}</div><div class="small" style="margin-top:4px">{c}</div></div>' for a,c in [('Assured','Confident, never loud'),('Refined','Precise, never stiff'),('Personal','Warm, never casual'),('Celebratory','Festive, never flashy')])}
+   </div>
+   <div style="display:flex;gap:30px;align-items:center;margin-top:30px">
+     <div style="display:flex">{''.join(f'<span style="width:34px;height:34px;border-radius:50%;background:{c};margin-right:-8px;border:2px solid {IVORY}"></span>' for c in [NAVY, CHAMP, IVORY, GOLD, MAROON])}</div>
+     <div class="small" style="font-size:12.5px">Midnight Navy · Champagne · Soft Ivory<br>Cormorant Garamond · Cinzel · Inter</div></div>
+   <div style="position:absolute;right:72px;bottom:38px;font-size:11px;letter-spacing:.14em;opacity:.5">02</div></div>
+</div>""", chrome=False, foot=False)
+
+# =====================================================================
 # 02 CONTENTS
 # =====================================================================
 toc = [('01', 'Brand foundation', 'Story, promise, personality, voice'),
@@ -76,8 +101,8 @@ toc = [('01', 'Brand foundation', 'Story, promise, personality, voice'),
        ('03', 'Fabric & production', 'Embroidery, woven, leather, engraving'),
        ('04', 'Colour', 'Palette, proportions, pairings'),
        ('05', 'Typography', 'Typefaces and hierarchy'),
-       ('06', 'Graphic language', 'Patterns, icons, stitch details'),
-       ('07', 'Brand in use', 'Labels, packaging, stationery, store, digital'),
+       ('06', 'Graphic language', 'Patterns, icons, details, photography'),
+       ('07', 'Brand in use', 'Labels, packaging, stationery, store, web, app, email'),
        ('08', 'Tezoro Wedding', 'The wedding-floor sub-brand')]
 rows = ''.join(f'''<div style="display:grid;grid-template-columns:70px 1fr 1fr;align-items:baseline;padding:17px 0;border-bottom:1px solid {LINE}">
   <span class="num">{a}</span><span class="serif" style="font-size:30px">{b}</span><span class="small">{c}</span></div>''' for a, b, c in toc)
@@ -202,10 +227,22 @@ slide(f'''
 <div style="position:absolute;left:72px;bottom:90px;width:600px" class="small">Our first choice wherever there is room: shop fascia, website header, letterhead, garment bags. Navy on ivory, or ivory and champagne on navy.</div>
 ''', 'paper', section='02 · Logo')
 
+# primary on four backgrounds
+bg4 = [('#FFFFFF', NAVY, GOLD, 'Pure white', '#FFFFFF · full colour'),
+       (IVORY, NAVY, GOLD, 'Soft ivory', '#F4F1EA · full colour'),
+       ('#0B0B0C', IVORY, CHAMP, 'Deep black', '#0B0B0C · reversed'),
+       (NAVY, IVORY, CHAMP, 'Midnight navy', '#14213D · reversed')]
+slide(f"""
+<div class="pad" style="top:100px">
+  <div style="display:flex;justify-content:space-between;align-items:end">{'<div>'+head('Primary logo', 'On every <em>approved ground.</em>')+'</div>'}<p class="small" style="width:420px;font-size:14px">The approved logo, centred with clear space of at least half the symbol on every side. Full colour on light grounds, reversed ivory and champagne on dark.</p></div>
+  <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:34px">
+   {''.join(f'<div><div style="background:{bg};height:470px;display:flex;align-items:center;justify-content:center;border:1px solid {LINE}">{L.inline(L.stacked, width=250, c1=c1, c2=c2)}</div><div style="display:flex;justify-content:space-between;margin-top:12px"><span class="caps" style="font-size:10.5px;font-weight:600">{n}</span><span class="small" style="font-size:12px">{d}</span></div></div>' for bg,c1,c2,n,d in bg4)}
+  </div></div>""", section='02 · Logo')
+
 # suite
 suite = [
     ('Primary horizontal', L.inline(L.horizontal, width=330, c1=NAVY, c2=GOLD), 'Signage, web header, stationery'),
-    ('Stacked', L.inline(L.stacked, height=200, c1=NAVY, c2=GOLD), 'Square spaces, bags, boxes, social'),
+    ('Stacked', L.inline(L.stacked, height=172, c1=NAVY, c2=GOLD), 'Square spaces, bags, boxes, social'),
     ('Wordmark', L.inline(L.wordmark, width=300, c1=NAVY, c2=GOLD), 'Woven labels, footers, fine print'),
     ('Symbol', L.inline(L.symbol, height=160, c=NAVY), 'Patches, buttons, profile picture'),
     ('Monogram', L.inline(L.monogram, height=150, c=NAVY), 'Cuffs, cufflinks, favicon, pattern'),
@@ -254,13 +291,31 @@ slide(f'''
   {''.join(f'<div><div style="background:{bg};height:250px;display:flex;align-items:center;justify-content:center;border:1px solid {LINE}">{L.inline(L.stacked, height=150, c1=c1, c2=c2)}</div><div class="tag" style="margin-top:10px">{n}</div></div>' for bg,c1,c2,n in cv)}
   </div></div>''', section='02 · Logo')
 
+# do
+def do_tile(label, art, bg='#fff'):
+    return (f'<div><div class="card" style="position:relative;height:300px;display:flex;align-items:center;justify-content:center;overflow:hidden;background:{bg}">'
+            f'{art}<span class="ok">✓</span></div><div class="tag" style="margin-top:10px">{label}</div></div>')
+
+
+slide(f"""
+<div class="pad" style="top:100px">
+  {head('Correct use', 'Please <em>do.</em>')}
+  <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:34px">
+   {do_tile('Use the logo exactly as supplied', L.inline(L.stacked, height=160, c1=NAVY, c2=GOLD), IVORY)}
+   {do_tile('Keep the clear space', f'<div style="border:1px dashed {GOLD};padding:34px 30px;background:{GOLD}14">' + L.inline(L.stacked, height=120, c1=NAVY, c2=GOLD) + '</div>')}
+   {do_tile('Use approved colour versions', L.inline(L.stacked, height=160, c1=IVORY, c2=CHAMP), NAVY)}
+   {do_tile('Choose clean, high-contrast grounds', L.inline(L.stacked, height=160, c1=NAVY, c2=NAVY), SAND)}
+  </div></div>""", section='02 · Logo')
+
 # misuse
-mis = [('Don\'t stretch or squash', 'transform:scaleX(1.45)'),
+mis = [('Don\'t stretch or squash', 'transform:scaleX(1.3)'),
        ('Don\'t rotate', 'transform:rotate(-14deg)'),
-       ('Don\'t add shadows or glows', 'filter:drop-shadow(6px 6px 3px rgba(0,0,0,.55))'),
+       ('Don\'t skew', 'transform:skewX(-18deg)'),
+       ('Don\'t crop', 'CROP'),
+       ('Don\'t use low contrast', 'LOW'),
+       ('Don\'t add shadows or effects', 'filter:drop-shadow(6px 6px 3px rgba(0,0,0,.55))'),
        ('Don\'t use off-brand colours', 'filter:hue-rotate(150deg) saturate(3)'),
        ('Don\'t outline', 'OUTLINE'),
-       ('Don\'t rearrange the parts', 'REARR'),
        ('Don\'t place on busy patterns', 'BUSY'),
        ('Don\'t retype in another font', 'FONT')]
 
@@ -273,18 +328,22 @@ def mis_tile(label, style):
         art = f'<div style="display:flex;flex-direction:row-reverse;align-items:center;gap:16px">{L.inline(L.symbol, height=70, c=NAVY)}{L.inline(L.wordmark, width=170, c1=NAVY, c2=GOLD)}</div>'
     elif style == 'BUSY':
         art = f'<div style="position:absolute;inset:0;background:repeating-linear-gradient(45deg,#C9A227 0 14px,#0F3D2E 14px 28px)"></div><div style="position:relative">{L.inline(L.stacked, height=140, c1=NAVY, c2=GOLD)}</div>'
+    elif style == 'CROP':
+        art = f'<div style="position:absolute;left:46%;top:-30px">{L.inline(L.stacked, height=200, c1=NAVY, c2=GOLD)}</div>'
+    elif style == 'LOW':
+        art = f'<div style="position:absolute;inset:0;background:{SAND}"></div><div style="position:relative">{L.inline(L.stacked, height=130, c1=STONE, c2=IVORY)}</div>'
     elif style == 'FONT':
         art = f'<div style="text-align:center"><div style="display:flex;justify-content:center">{L.inline(L.symbol, height=70, c=NAVY)}</div><div style="font-family:Arial Black,Arial;font-weight:900;font-size:34px;color:{NAVY};margin-top:10px">TEZORO</div></div>'
     else:
-        art = f'<div style="{style}">{L.inline(L.stacked, height=140, c1=NAVY, c2=GOLD)}</div>'
-    return (f'<div><div class="card" style="position:relative;height:250px;display:flex;align-items:center;justify-content:center;overflow:hidden">'
+        art = f'<div style="{style}">{L.inline(L.stacked, height=130, c1=NAVY, c2=GOLD)}</div>'
+    return (f'<div><div class="card" style="position:relative;height:244px;display:flex;align-items:center;justify-content:center;overflow:hidden">'
             f'{art}<span class="x">✕</span></div><div class="tag" style="margin-top:10px">{label}</div></div>')
 
 
 slide(f'''
 <div class="pad" style="top:100px">
   {head('Misuse', 'Please <em>don\'t.</em>')}
-  <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:34px">{''.join(mis_tile(a, b) for a, b in mis)}</div>
+  <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-top:30px">{''.join(mis_tile(a, b) for a, b in mis)}</div>
 </div>''', section='02 · Logo')
 
 # =====================================================================
@@ -345,15 +404,26 @@ def swatch(name, hx, role, desc, big=False):
       <div style="font-size:12px;line-height:1.7;opacity:.85;font-variant-numeric:tabular-nums"><b>{hx}</b><br>RGB {r} {g} {b}<br>CMYK {c} {m} {y} {k}</div></div>'''
 
 
-slide(f'''
+def swatch2(name, hx, role, desc, h):
+    r, g, bb = rgb(hx)
+    c, m, y, k = cmyk(hx)
+    fg = IVORY if lum(hx) < .25 else INK
+    return f"""<div style="background:{hx};color:{fg};height:{h}px;padding:22px 22px 20px;display:flex;flex-direction:column;justify-content:space-between;border:1px solid rgba(0,0,0,.06)">
+      <div><div class="serif" style="font-size:30px;line-height:1">{name}</div><div style="font-size:12px;line-height:1.5;margin-top:10px;opacity:.78">{desc}</div></div>
+      <div style="font-size:11.5px;line-height:1.7;opacity:.85;font-variant-numeric:tabular-nums"><b>{hx}</b><br>RGB {r} {g} {bb}<br>CMYK {c} {m} {y} {k}</div></div>"""
+
+
+P = {n: (n, h, r, d) for n, h, r, d in PALETTE}
+groups = [('Primary', 'Logo, main surfaces, key accents', 2, ['Midnight Navy', 'Champagne']),
+          ('Secondary', 'Small type, text, the wedding floor', 3, ['Antique Gold', 'Deep Ink', 'Wedding Maroon']),
+          ('Neutral', 'Backgrounds, paper, packaging', 3, ['Soft Ivory', 'Taupe Stone', 'Sandstone'])]
+slide(f"""
 <div class="pad" style="top:100px">
-  {head('Palette', 'Eight colours, <em>one mood.</em>')}
-  <div style="display:grid;grid-template-columns:1.4fr 1.4fr 1fr 1fr 1fr;grid-template-rows:300px 300px;gap:10px;margin-top:30px">
-    {swatch(*PALETTE[0], big=True)}{swatch(*PALETTE[1], big=True)}
-    {swatch(*PALETTE[2])}{swatch(*PALETTE[3])}{swatch(*PALETTE[4])}
-    {swatch(*PALETTE[5])}{swatch(*PALETTE[6])}{swatch(*PALETTE[7])}
+  <div style="display:flex;justify-content:space-between;align-items:end">{'<div>'+head('Palette', 'A colour system, <em>not a collection.</em>')+'</div>'}<p class="small" style="width:420px;font-size:14px">Taken from the approved logo: navy for the mark, champagne and antique gold for the sub-line and rule. Supporting colours keep the same warm, quiet temperature. CMYK values are starting points: proof on the final stock.</p></div>
+  <div style="display:grid;grid-template-columns:2fr 3fr 3fr;gap:22px;margin-top:30px">
+   {''.join(f'<div><div style="display:flex;justify-content:space-between;align-items:baseline;border-bottom:2px solid {NAVY};padding-bottom:8px;margin-bottom:12px"><span class="caps" style="font-size:11px;font-weight:600">{g}</span><span class="small" style="font-size:11.5px">{u}</span></div><div style="display:grid;grid-template-columns:repeat({n},1fr);gap:8px">' + ''.join(swatch2(*P[c], 520) for c in cs) + '</div></div>' for g,u,n,cs in groups)}
   </div>
-</div>''', section='04 · Colour')
+</div>""", section='04 · Colour')
 
 # proportion + pairings
 pairs = [(IVORY, NAVY), (NAVY, IVORY), (NAVY, CHAMP), (IVORY, GOLD), (MAROON, CHAMP), (SAND, INK)]
@@ -396,10 +466,27 @@ slide(f'''
   <div class="card" style="padding:64px 60px">
     <div class="eyebrow">The wedding collection</div>
     <div class="serif" style="font-size:72px;line-height:1;margin-top:18px">Cut for the <em style="color:{GOLD}">day you'll remember.</em></div>
+    <div class="serif" style="font-size:28px;line-height:1.2;margin-top:18px;color:{NAVY}">Private consultations on the wedding floor</div>
     <p style="font-size:17px;line-height:1.65;color:{MUTED};margin-top:24px">Sherwanis, bandhgalas and three-piece suits, made to your measure from cloth you choose. Book a private consultation on the wedding floor.</p>
     <div style="display:flex;gap:14px;margin-top:34px"><span class="caps" style="background:{NAVY};color:{IVORY};padding:16px 26px;font-size:11.5px">Book a fitting</span><span class="caps" style="border:1px solid {NAVY};padding:16px 26px;font-size:11.5px">View the lookbook</span></div>
+    <div style="font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:{MUTED};margin-top:26px;font-weight:500">Pictured: ivory raw-silk sherwani, No. TZ-0152</div>
   </div>
 </div>''', section='05 · Typography')
+
+# type scale
+sc = [('Display', 'Corm', 96, 500, '−0.01 em', '1.0', 'Made to measure.'),
+      ('Headline', 'Corm', 56, 500, '0', '1.05', 'The wedding collection'),
+      ('Subheading', 'Corm', 32, 500, '0', '1.2', 'Private consultations, by appointment'),
+      ('Eyebrow / label', 'Cinz', 13, 600, '+0.32 em', '1.4', 'BESPOKE TAILORING · POTHENCODE'),
+      ('Body', 'Inter', 17, 400, '0', '1.6', 'Suits, shirts and wedding wear cut to your measure from cloth you choose.'),
+      ('Caption', 'Inter', 12, 500, '+0.14 em', '1.5', 'NAVY WOOL TWILL · No. TZ-0147'),
+      ('Button', 'Cinz', 12, 600, '+0.28 em', '1', 'BOOK A FITTING')]
+slide(f"""
+<div class="pad" style="top:100px">
+  <div style="display:flex;justify-content:space-between;align-items:end">{'<div>'+head('Type scale', 'Sizes, weights, <em>spacing.</em>')+'</div>'}<p class="small" style="width:420px;font-size:14px">A 1.6 ratio scale for print and screen. Leave one line of the larger size above a heading, and half a line below it.</p></div>
+  <div style="margin-top:26px;border-top:2px solid {NAVY}">
+   {''.join(f'<div style="display:grid;grid-template-columns:170px 260px 1fr;gap:30px;align-items:center;padding:{10 if s<40 else 6}px 0;border-bottom:1px solid {LINE}"><span class="caps" style="font-size:10.5px;font-weight:600">{n}</span><span class="small" style="font-size:12px;font-variant-numeric:tabular-nums">{ {"Corm":"Cormorant","Cinz":"Cinzel","Inter":"Inter"}[f]} {w} · {s}px · {t} · lh {lh}</span><span style="font-family:{f};font-size:{s}px;font-weight:{w};line-height:{lh};letter-spacing:{t.replace("−","-").replace(" em","em") if t!="0" else "0"};{"color:"+NAVY if f=="Corm" else ""};white-space:nowrap;overflow:hidden">{ex if n!="Button" else f"<span style=\'display:inline-block;background:{NAVY};color:{IVORY};padding:14px 24px\'>{ex}</span>"}</span></div>' for n,f,s,w,t,lh,ex in sc)}
+  </div></div>""", section='05 · Typography')
 
 # =====================================================================
 # 06 GRAPHIC LANGUAGE
@@ -440,6 +527,8 @@ slide(f'''
    </div></div>
 </div>''', section='06 · Graphic language')
 
+slide(M.photography_scene(), section='06 · Photography')
+
 # =====================================================================
 # 07 BRAND IN USE
 # =====================================================================
@@ -454,6 +543,8 @@ slide(M.stationery_scene(), 'sand', section='07 · Stationery')
 slide(M.store_scene(), 'ink', section='07 · Store front')
 slide(M.instagram_scene(), 'paper', section='07 · Instagram')
 slide(M.website_scene(), 'sand', section='07 · Website')
+slide(M.app_scene(), 'paper', section='07 · Mobile app')
+slide(M.email_scene(), 'sand', section='07 · Email signature')
 slide(M.passport_scene(), 'navy', section='07 · Client experience')
 
 # =====================================================================
