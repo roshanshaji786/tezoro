@@ -126,17 +126,16 @@ function Scene({ reduced }: { reduced: boolean }) {
       thread.current.geometry = geo;
     }
 
-    // Needle rides the tip of the thread, dipping in and out of the cloth.
+    // Needle rides the tip of the thread (same arc-length parameter the tube uses).
     if (needle.current) {
-      const u = Math.max(progress, 0.001);
-      threadPoint(u, t, tmp.a);
-      threadPoint(Math.min(u + 0.012, 1), t, tmp.b);
-      const dir = tmp.b.sub(tmp.a).normalize();
-      dir.z += Math.cos(u * Math.PI * 2 * STITCHES) * 0.9;
-      dir.normalize();
-      tmp.q.setFromUnitVectors(tmp.up, dir);
+      const u = Math.min(Math.max(progress, 0.001), 0.999);
+      curve.getPointAt(u, tmp.a);
+      curve.getTangentAt(u, tmp.b);
+      tmp.b.z += 0.35;
+      tmp.b.normalize();
+      tmp.q.setFromUnitVectors(tmp.up, tmp.b);
       needle.current.position.copy(tmp.a);
-      needle.current.quaternion.slerp(tmp.q, 0.35);
+      needle.current.quaternion.slerp(tmp.q, 0.25);
       needle.current.visible = progress < 1;
     }
 
