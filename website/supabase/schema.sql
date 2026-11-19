@@ -3,7 +3,7 @@
 
 create extension if not exists pgcrypto;
 
-create table if not exists public.bookings (
+create table if not exists public.tezoro_bookings (
   id uuid primary key default gen_random_uuid(),
   ref text not null unique,
   purpose text not null,
@@ -19,9 +19,9 @@ create table if not exists public.bookings (
   status text not null default 'new' check (status in ('new','confirmed','visited','cancelled')),
   created_at timestamptz not null default now()
 );
-create index if not exists bookings_date_idx on public.bookings (preferred_date);
+create index if not exists tezoro_bookings_date_idx on public.tezoro_bookings (preferred_date);
 
-create table if not exists public.orders (
+create table if not exists public.tezoro_orders (
   id uuid primary key default gen_random_uuid(),
   code text not null unique,
   customer_name text not null,
@@ -35,7 +35,7 @@ create table if not exists public.orders (
   updated_at timestamptz not null default now()
 );
 
-create table if not exists public.register (
+create table if not exists public.tezoro_register (
   no serial primary key,
   garment text not null,
   occasion text not null,
@@ -45,6 +45,6 @@ create table if not exists public.register (
   created_at timestamptz not null default now()
 );
 
-alter table public.bookings enable row level security;
-alter table public.orders enable row level security;
-alter table public.register enable row level security;
+alter table public.tezoro_bookings enable row level security;
+alter table public.tezoro_orders enable row level security;
+alter table public.tezoro_register enable row level security;

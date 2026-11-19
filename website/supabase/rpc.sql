@@ -1,0 +1,4 @@
+-- Access layer. Applied after schema.sql. Tables stay private; the site calls only these functions.
+-- After applying, store the SHA-256 of TEZORO_DB_SECRET:
+--   insert into public.tezoro_settings (key, value) values ('server_secret_sha256', '<sha256 hex>');
+-- (full definitions applied as migration tezoro_rpc; see repo history)

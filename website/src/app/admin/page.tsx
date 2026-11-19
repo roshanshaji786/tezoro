@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { LogoMark } from "@/components/Logo";
 import { adminConfigured, isAdmin } from "@/lib/auth";
-import { db, type Booking, type Order } from "@/lib/db";
+import { adminRpc, dbReady, type Booking, type Order } from "@/lib/db";
 import { orderStages, purposes, fabrics } from "@/lib/content";
 import { whatsappLink } from "@/lib/site";
 import { LoginForm } from "./LoginForm";
@@ -41,8 +41,8 @@ export default async function Admin({ searchParams }: { searchParams: Promise<{ 
       <Shell>
         <h1 className="display text-4xl text-navy">Almost ready</h1>
         <p className="mt-4 max-w-xl text-ink/70">
-          Set <code className="bg-white px-1">ADMIN_PASSWORD</code>, <code className="bg-white px-1">SUPABASE_URL</code> and{" "}
-          <code className="bg-white px-1">SUPABASE_SERVICE_ROLE_KEY</code> in the hosting settings to switch on the staff desk.
+          Set <code className="bg-white px-1">ADMIN_PASSWORD</code>, <code className="bg-white px-1">SUPABASE_URL</code>, <code className="bg-white px-1">SUPABASE_PUBLISHABLE_KEY</code> and{" "}
+          <code className="bg-white px-1">TEZORO_DB_SECRET</code> in the hosting settings to switch on the staff desk.
         </p>
       </Shell>
     );
@@ -59,14 +59,13 @@ export default async function Admin({ searchParams }: { searchParams: Promise<{ 
     );
   }
 
-  const c = db();
   const { tab = "bookings" } = await searchParams;
 
-  if (!c) {
+  if (!dbReady() || !process.env.TEZORO_DB_SECRET) {
     return (
       <Shell>
         <h1 className="display text-4xl text-navy">Database not connected</h1>
-        <p className="mt-4 text-ink/70">Add the Supabase keys in the hosting settings, then run supabase/schema.sql once.</p>
+        <p className="mt-4 text-ink/70">Add the Supabase settings and TEZORO_DB_SECRET in the hosting settings, then run supabase/schema.sql once.</p>
         <form action={logout} className="mt-8">
           <button className="btn btn-ghost-dark">Sign out</button>
         </form>
@@ -74,11 +73,8 @@ export default async function Admin({ searchParams }: { searchParams: Promise<{ 
     );
   }
 
-  const today = new Date().toISOString().slice(0, 10);
-  const [{ data: bookings }, { data: orders }] = await Promise.all([
-    c.from("bookings").select("*").gte("preferred_date", new Date(Date.now() - 7 * 86_400_000).toISOString().slice(0, 10)).order("preferred_date").order("slot").limit(200),
-    c.from("orders").select("*").order("updated_at", { ascending: false }).limit(200),
-  ]);
+  const today = new Date().toLocaleDateString("en-CA", { timeZone: "Asia/Kolkata" });
+  const [bookings, orders] = await Promise.all([adminRpc<Booking[]>("list_bookings"), adminRpc<Order[]>("list_orders")]);
   const b = (bookings ?? []) as Booking[];
   const o = (orders ?? []) as Order[];
   const todays = b.filter((x) => x.preferred_date === today && x.status !== "cancelled");

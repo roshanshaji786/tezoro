@@ -48,7 +48,7 @@ export async function POST(req: Request) {
   const c = db();
   let stored = false;
   if (c) {
-    const { error } = await c.from("bookings").insert({ ref, purpose, preferred_date, slot, name, phone, email, wedding_date, look_code, fabric_id, notes });
+    const { error } = await c.rpc("tezoro_create_booking", { p: { ref, purpose, preferred_date, slot, name, phone, email, wedding_date, look_code, fabric_id, notes } });
     if (error) {
       console.error("booking insert failed", error.message);
     } else {
