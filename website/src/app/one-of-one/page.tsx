@@ -48,7 +48,7 @@ export default async function OneOfOne() {
                 <div className="flex h-full flex-col border border-champagne/50 p-5">
                   <div className="flex justify-between">
                     <span className="eyebrow text-[0.55rem] text-stone">{e.month}</span>
-                    <span className="eyebrow text-[0.55rem] text-champagne">{e.occasion}</span>
+                    <span className="eyebrow text-[0.55rem] text-gold">{e.occasion}</span>
                   </div>
                   <p className="display mt-6 text-5xl">No. {String(e.no).padStart(4, "0")}</p>
                   <p className="display mt-3 text-2xl text-navy/90">{e.garment}</p>

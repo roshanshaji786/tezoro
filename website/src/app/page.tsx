@@ -115,7 +115,7 @@ export default function Home() {
         <ol className="mt-14 grid gap-px overflow-hidden bg-navy/10 sm:grid-cols-2 lg:grid-cols-3">
           {processSteps.map((s, i) => (
             <Reveal as="li" key={s.n} delay={i * 80} className="bg-ivory p-8">
-              <p className="display text-5xl text-champagne">{s.n}</p>
+              <p className="display text-5xl text-gold">{s.n}</p>
               <h3 className="display mt-4 text-3xl text-navy">{s.title}</h3>
               <p className="mt-3 text-sm leading-relaxed text-ink/70">{s.text}</p>
               <p className="eyebrow mt-5 text-stone">{s.days}</p>
@@ -175,7 +175,7 @@ export default function Home() {
               <div className="flex h-full flex-col justify-between border border-champagne/60 p-6">
                 <div className="flex items-start justify-between">
                   <p className="eyebrow text-[0.6rem] text-stone">Tezoro Atelier · Pothencode</p>
-                  <p className="eyebrow text-[0.6rem] text-champagne">One of one</p>
+                  <p className="eyebrow text-[0.6rem] text-gold">One of one</p>
                 </div>
                 <p className="display text-center text-6xl sm:text-7xl">No. 0147</p>
                 <div className="flex items-end justify-between text-xs text-stone">

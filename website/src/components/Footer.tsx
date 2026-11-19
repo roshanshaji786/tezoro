@@ -13,10 +13,10 @@ export function Footer() {
           </div>
           <div>
             <p className="eyebrow mb-5 text-champagne">Explore</p>
-            <ul className="space-y-3 text-sm">
+            <ul className="space-y-1 text-sm">
               {nav.map((n) => (
                 <li key={n.href}>
-                  <Link href={n.href} className="hover:text-champagne">
+                  <Link href={n.href} className="inline-block py-1.5 hover:text-champagne">
                     {n.label}
                   </Link>
                 </li>
@@ -39,29 +39,29 @@ export function Footer() {
           </div>
           <div>
             <p className="eyebrow mb-5 text-champagne">Talk to us</p>
-            <ul className="space-y-3 text-sm">
+            <ul className="space-y-1 text-sm">
               <li>
-                <a href={whatsappLink("Hi Tezoro, I'd like to know more.")} className="hover:text-champagne">
+                <a href={whatsappLink("Hi Tezoro, I'd like to know more.")} className="inline-block py-1.5 hover:text-champagne">
                   WhatsApp
                 </a>
               </li>
               <li>
-                <a href={site.phoneHref} className="hover:text-champagne">
+                <a href={site.phoneHref} className="inline-block py-1.5 hover:text-champagne">
                   {site.phone}
                 </a>
               </li>
               <li>
-                <a href={`mailto:${site.email}`} className="hover:text-champagne">
+                <a href={`mailto:${site.email}`} className="inline-block py-1.5 hover:text-champagne">
                   {site.email}
                 </a>
               </li>
               <li>
-                <a href={site.instagram} className="hover:text-champagne">
+                <a href={site.instagram} className="inline-block py-1.5 hover:text-champagne">
                   {site.instagramHandle}
                 </a>
               </li>
               <li>
-                <Link href="/track" className="hover:text-champagne">
+                <Link href="/track" className="inline-block py-1.5 hover:text-champagne">
                   Track my order
                 </Link>
               </li>
@@ -72,7 +72,7 @@ export function Footer() {
         <div className="mt-6 flex flex-col justify-between gap-2 text-xs text-ivory/40 sm:flex-row">
           <p>© {new Date().getFullYear()} Tezoro Atelier. Every piece, one of one.</p>
           <p>
-            Crafted by <a href="https://info.dartsai.in" className="hover:text-champagne">DARTS AI</a>
+            Crafted by <a href="https://info.dartsai.in" className="inline-block py-1.5 hover:text-champagne">DARTS AI</a>
           </p>
         </div>
       </div>

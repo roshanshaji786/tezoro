@@ -85,7 +85,7 @@ export default async function Admin({ searchParams }: { searchParams: Promise<{ 
     <Shell>
       <div className="flex flex-wrap items-end justify-between gap-4">
         <div>
-          <p className="eyebrow text-champagne">{new Date().toLocaleDateString("en-IN", { weekday: "long", day: "numeric", month: "long" })}</p>
+          <p className="eyebrow text-gold">{new Date().toLocaleDateString("en-IN", { weekday: "long", day: "numeric", month: "long" })}</p>
           <h1 className="display mt-2 text-5xl text-navy">Good day.</h1>
         </div>
         <form action={logout}>

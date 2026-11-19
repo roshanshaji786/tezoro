@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import { randomBytes } from "crypto";
 import { db } from "@/lib/db";
 import { purposes, slots } from "@/lib/content";
+import { clientIp, limited } from "@/lib/ratelimit";
 
 const ALPHABET = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789";
 function makeRef() {
@@ -13,6 +14,16 @@ const clean = (v: unknown, max = 200) => (typeof v === "string" ? v.trim().slice
 const isDate = (v: string) => /^\d{4}-\d{2}-\d{2}$/.test(v) && !Number.isNaN(Date.parse(v));
 
 export async function POST(req: Request) {
+  if (limited("book:" + clientIp(req.headers), 5, 10 * 60_000)) {
+    return NextResponse.json({ ok: false, error: "Too many bookings from this connection. Please message us on WhatsApp." }, { status: 429 });
+  }
+  const origin = req.headers.get("origin");
+  if (origin && new URL(origin).host !== req.headers.get("host")) {
+    return NextResponse.json({ ok: false, error: "Invalid origin" }, { status: 403 });
+  }
+  if (Number(req.headers.get("content-length") ?? 0) > 8_000) {
+    return NextResponse.json({ ok: false, error: "Request too large" }, { status: 413 });
+  }
   let body: Record<string, unknown>;
   try {
     body = await req.json();
@@ -36,9 +47,10 @@ export async function POST(req: Request) {
 
   const errors: string[] = [];
   if (!purposes.some((p) => p.id === purpose)) errors.push("purpose");
-  if (!isDate(preferred_date)) errors.push("date");
+  const day = Date.parse(preferred_date);
+  if (!isDate(preferred_date) || day < Date.now() - 86_400_000 || day > Date.now() + 120 * 86_400_000) errors.push("date");
   if (!slots.includes(slot)) errors.push("slot");
-  if (name.length < 2) errors.push("name");
+  if (name.length < 2 || /[<>]/.test(name)) errors.push("name");
   if (phone.replace(/\D/g, "").length < 10) errors.push("phone");
   if (email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) errors.push("email");
   if (wedding_date && !isDate(wedding_date)) errors.push("weddingDate");

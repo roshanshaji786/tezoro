@@ -223,7 +223,7 @@ export function BookingForm() {
 
       {step === 3 && done && (
         <div className="text-center">
-          <p className="eyebrow text-champagne">Booked</p>
+          <p className="eyebrow text-gold">Booked</p>
           <h2 className="display mt-4 text-5xl text-navy sm:text-6xl">
             See you on <em>{dateLabel.split(",")[0]}</em>
           </h2>

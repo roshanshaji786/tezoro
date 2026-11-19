@@ -37,7 +37,7 @@ export default function Process() {
               <div className={`${i % 2 ? "sm:pr-12 sm:text-right" : "sm:pl-12"}`}>
                 <p className="leading-relaxed text-ink/70 sm:pt-7">{s.text}</p>
               </div>
-              <span className="display absolute top-0 left-0 flex h-12 w-12 items-center justify-center rounded-full border border-champagne bg-ivory text-lg text-champagne sm:left-1/2 sm:-translate-x-1/2">
+              <span className="display absolute top-0 left-0 flex h-12 w-12 items-center justify-center rounded-full border border-champagne bg-ivory text-lg text-gold sm:left-1/2 sm:-translate-x-1/2">
                 {s.n}
               </span>
             </Reveal>
@@ -47,7 +47,7 @@ export default function Process() {
 
       <section className="bg-ivory-deep">
         <div className="mx-auto max-w-4xl px-4 py-24 sm:px-8">
-          <p className="eyebrow text-champagne">Questions</p>
+          <p className="eyebrow text-gold">Questions</p>
           <h2 className="display mt-4 text-4xl text-navy sm:text-6xl">Asked often</h2>
           <div className="mt-10 divide-y divide-navy/10 border-y border-navy/10">
             {faqs.map((f) => (

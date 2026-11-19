@@ -58,11 +58,11 @@ function LookCard({ look }: { look: Look }) {
           href={whatsappLink(`Hi Tezoro, I'd like something made in the spirit of ${look.title} (${look.code}).`)}
           target="_blank"
           rel="noopener"
-          className="eyebrow text-navy hover:text-champagne"
+          className="eyebrow inline-block py-3 text-navy hover:text-champagne"
         >
           Have one made →
         </a>
-        <Link href={`/book?look=${look.code}`} className="eyebrow text-stone hover:text-navy">
+        <Link href={`/book?look=${look.code}`} className="eyebrow inline-block py-3 text-stone hover:text-navy">
           Book with this look
         </Link>
       </div>

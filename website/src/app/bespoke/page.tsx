@@ -40,9 +40,9 @@ export default function Bespoke() {
               </div>
               <div className="flex flex-col p-8">
                 <h2 className="display text-4xl text-navy">{s.title}</h2>
-                <p className="eyebrow mt-2 text-champagne">From {s.from}</p>
+                <p className="eyebrow mt-2 text-gold">From {s.from}</p>
                 <p className="mt-4 flex-1 text-ink/70">{s.text}</p>
-                <Link href={`/book?purpose=${s.title === "Shirts" ? "shirts" : s.title === "Ethnic" ? "ethnic" : "suit"}`} className="eyebrow mt-6 text-navy hover:text-champagne">
+                <Link href={`/book?purpose=${s.title === "Shirts" ? "shirts" : s.title === "Ethnic" ? "ethnic" : "suit"}`} className="eyebrow mt-6 inline-block py-3 text-navy hover:text-champagne">
                   Book a consult →
                 </Link>
               </div>

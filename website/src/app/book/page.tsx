@@ -11,7 +11,7 @@ export default function Book() {
   return (
     <section className="min-h-screen px-4 pt-32 pb-28 sm:px-8 sm:pt-40">
       <div className="mx-auto max-w-3xl">
-        <p className="eyebrow text-champagne">Book a fitting</p>
+        <p className="eyebrow text-gold">Book a fitting</p>
         <h1 className="display mt-4 text-5xl text-navy sm:text-7xl">
           Thirty quiet minutes, <em>all about you.</em>
         </h1>

@@ -2,7 +2,9 @@
 import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
 import { adminRpc } from "@/lib/db";
+import { headers } from "next/headers";
 import { endSession, isAdmin, passwordMatches, startSession } from "@/lib/auth";
+import { clientIp, limited } from "@/lib/ratelimit";
 
 async function guard() {
   if (!(await isAdmin())) redirect("/admin");
@@ -12,6 +14,9 @@ const s = (f: FormData, k: string, max = 200) => String(f.get(k) ?? "").trim().s
 const UUID = /^[0-9a-f-]{36}$/i;
 
 export async function login(_: unknown, form: FormData) {
+  if (limited("login:" + clientIp(await headers()), 6, 15 * 60_000)) {
+    return { error: "Too many attempts. Try again in 15 minutes." };
+  }
   if (!passwordMatches(s(form, "password", 200))) {
     await new Promise((r) => setTimeout(r, 800));
     return { error: "That password is not right." };

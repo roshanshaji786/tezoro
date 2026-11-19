@@ -25,7 +25,7 @@ export function Logo({ light = false, className = "" }: { light?: boolean; class
         >
           TEZORO
         </span>
-        <span className="mt-1 font-[family-name:var(--font-caps)] text-[0.5rem] tracking-[0.62em] text-champagne">
+        <span className={`mt-1 font-[family-name:var(--font-caps)] text-[0.5rem] tracking-[0.62em] ${light ? "text-champagne" : "text-gold"}`}>
           ATELIER
         </span>
       </span>

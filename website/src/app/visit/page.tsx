@@ -21,7 +21,7 @@ export default function Visit() {
             <p className="eyebrow text-stone">Address</p>
             <p className="display mt-3 text-3xl text-navy">{site.address.line1}</p>
             <p className="text-ink/70">{site.address.line2}</p>
-            <a href={directions} target="_blank" rel="noopener" className="eyebrow mt-4 inline-block text-navy hover:text-champagne">
+            <a href={directions} target="_blank" rel="noopener" className="eyebrow mt-4 inline-block py-3 text-navy hover:text-champagne">
               Get directions →
             </a>
           </div>
