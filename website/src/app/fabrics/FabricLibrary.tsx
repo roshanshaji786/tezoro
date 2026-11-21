@@ -11,7 +11,7 @@ export function FabricLibrary() {
   return (
     <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr]">
       <div className="lg:sticky lg:top-24 lg:self-start">
-        <div className="relative aspect-[4/5] w-full overflow-hidden bg-[radial-gradient(ellipse_at_50%_35%,#24345a_0%,#0b1426_75%)] sm:aspect-[5/5]">
+        <div className="relative aspect-[4/5] w-full overflow-hidden bg-[radial-gradient(ellipse_at_50%_35%,#304b3f_0%,#1b2b24_75%)] sm:aspect-[5/5]">
           <FabricViewer fabric={active} />
           <p className="eyebrow pointer-events-none absolute bottom-4 left-4 text-[0.6rem] text-ivory/50">Drag to turn the cloth</p>
         </div>

@@ -100,7 +100,7 @@ function Swatch({ fabric }: { fabric: Fabric }) {
       {/* brass hanger rod */}
       <mesh position={[0, 1.52, 0]} rotation={[0, 0, Math.PI / 2]}>
         <cylinderGeometry args={[0.035, 0.035, 2.7, 24]} />
-        <meshStandardMaterial color="#c9a46a" metalness={0.9} roughness={0.3} />
+        <meshStandardMaterial color="#bfa08c" metalness={0.9} roughness={0.3} />
       </mesh>
     </group>
   );

@@ -95,8 +95,8 @@ function Scene({ reduced }: { reduced: boolean }) {
         fragmentShader: clothFragment,
         uniforms: {
           uTime: { value: 0 },
-          uBase: { value: srgb("#2a3f75") },
-          uSheen: { value: srgb("#d4b483") },
+          uBase: { value: srgb("#3a5a4b") },
+          uSheen: { value: srgb("#b99b88") },
         },
         side: THREE.DoubleSide,
       }),
@@ -151,7 +151,7 @@ function Scene({ reduced }: { reduced: boolean }) {
       <mesh geometry={clothGeo} material={clothMat} />
       <mesh ref={thread}>
         <bufferGeometry />
-        <meshStandardMaterial color="#e2c58f" roughness={0.35} metalness={0.55} emissive="#5a4420" emissiveIntensity={0.25} />
+        <meshStandardMaterial color="#d2b8a6" roughness={0.35} metalness={0.55} emissive="#4a3528" emissiveIntensity={0.25} />
       </mesh>
       <group ref={needle} scale={1.6}>
         {/* shaft, pointing along +Y; tip leads */}
@@ -165,7 +165,7 @@ function Scene({ reduced }: { reduced: boolean }) {
         </mesh>
         <mesh position={[0, -1.02, 0]}>
           <torusGeometry args={[0.03, 0.009, 8, 20]} />
-          <meshStandardMaterial color="#d4b483" metalness={1} roughness={0.25} />
+          <meshStandardMaterial color="#b99b88" metalness={1} roughness={0.25} />
         </mesh>
       </group>
     </group>
@@ -193,18 +193,18 @@ export default function HeroScene() {
         dpr={[1, 1.75]}
         camera={{ position: [0, 0, 7.2], fov: 42 }}
         gl={{ antialias: true, powerPreference: "high-performance" }}
-        onCreated={({ gl }) => gl.setClearColor("#0b1426")}
+        onCreated={({ gl }) => gl.setClearColor("#1b2b24")}
       >
         <ambientLight intensity={0.5} />
         <directionalLight position={[-3, 4, 5]} intensity={2.2} color="#fff4e0" />
         <Environment resolution={64}>
           <Lightformer intensity={3} position={[0, 4, 4]} scale={[10, 2, 1]} color="#fff2dc" />
-          <Lightformer intensity={1.5} position={[-5, 0, 2]} scale={[2, 6, 1]} color="#d4b483" />
-          <Lightformer intensity={1} position={[5, -1, 2]} scale={[2, 6, 1]} color="#8aa0d0" />
+          <Lightformer intensity={1.5} position={[-5, 0, 2]} scale={[2, 6, 1]} color="#b99b88" />
+          <Lightformer intensity={1} position={[5, -1, 2]} scale={[2, 6, 1]} color="#9db5a8" />
         </Environment>
         <Scene reduced={reduced} />
-        {!reduced && <Sparkles count={60} scale={[12, 6, 4]} size={2.2} speed={0.25} color="#d4b483" opacity={0.6} />}
-        <fog attach="fog" args={["#0b1426", 7, 14]} />
+        {!reduced && <Sparkles count={60} scale={[12, 6, 4]} size={2.2} speed={0.25} color="#b99b88" opacity={0.6} />}
+        <fog attach="fog" args={["#1b2b24", 7, 14]} />
       </Canvas>
     </div>
   );

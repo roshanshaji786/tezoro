@@ -77,7 +77,7 @@ export function WeddingPlanner() {
             <li key={m.title} className={`relative pb-8 pl-10 transition-opacity duration-500 ${m.past ? "opacity-40" : ""}`}>
               <span
                 className={`absolute top-1.5 left-0 h-[15px] w-[15px] rounded-full border ${
-                  isNext ? "border-champagne bg-champagne shadow-[0_0_0_6px_rgba(212,180,131,0.2)]" : "border-champagne/60 bg-maroon-deep"
+                  isNext ? "border-champagne bg-champagne shadow-[0_0_0_6px_rgba(185,155,136,0.2)]" : "border-champagne/60 bg-maroon-deep"
                 }`}
               />
               <p className="eyebrow text-champagne/80">{m.date ? fmt(m.date) : `${m.daysBefore} days before`}</p>

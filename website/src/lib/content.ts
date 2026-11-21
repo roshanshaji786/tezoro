@@ -48,7 +48,7 @@ export const looks: Look[] = [
 ];
 
 export const services = [
-  { title: "Bespoke Suits", from: "₹14,900", text: "Two and three-piece suits drafted to your measurements and cut by hand. Two fittings, one pattern, one man.", pattern: "twill" as Pattern, base: "#14213D", accent: "#2a3a63" },
+  { title: "Bespoke Suits", from: "₹14,900", text: "Two and three-piece suits drafted to your measurements and cut by hand. Two fittings, one pattern, one man.", pattern: "twill" as Pattern, base: "#263B32", accent: "#3b5a4c" },
   { title: "Shirts", from: "₹2,490", text: "Choose collar, cuff, placket and monogram. Your pattern is saved, so the next shirt is a message away.", pattern: "linen" as Pattern, base: "#ece4d3", accent: "#d6ccb6" },
   { title: "Trousers", from: "₹2,990", text: "Rise, break and seat cut for how you sit, walk and stand. Wool, linen and cotton.", pattern: "check" as Pattern, base: "#6f7179", accent: "#9da0a8" },
   { title: "Ethnic", from: "₹5,900", text: "Kurtas, bandhgalas, Nehru jackets and mundu sets in silk, linen and khadi.", pattern: "silk" as Pattern, base: "#d9c08e", accent: "#ead6a8" },

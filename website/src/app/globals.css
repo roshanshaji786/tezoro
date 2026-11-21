@@ -1,18 +1,22 @@
 @import "tailwindcss";
 
 @theme {
-  --color-navy: #14213d;
-  --color-navy-deep: #0b1426;
-  --color-navy-soft: #24345a;
-  --color-champagne: #d4b483;
-  --color-champagne-soft: #e8d6b5;
-  --color-gold: #7a5c2a; /* champagne text on light backgrounds (WCAG AA) */
-  --color-ivory: #f4f1ea;
-  --color-ivory-deep: #ebe4d6;
-  --color-maroon: #5a1a24;
-  --color-maroon-deep: #3d1118;
-  --color-ink: #1c1c1e;
-  --color-stone: #6b6658;
+  /* Palette 2026-11: forest green + taupe + cream, matched to the reference
+     site Roshan picked. Token names kept from the brand-kit palette so the
+     components did not change: "navy" = forest green, "champagne" = taupe,
+     "ivory" = cream, "maroon" = espresso (wedding pages). */
+  --color-navy: #263b32;
+  --color-navy-deep: #1b2b24;
+  --color-navy-soft: #304b3f;
+  --color-champagne: #b99b88;
+  --color-champagne-soft: #dccdc1;
+  --color-gold: #7a5c48; /* taupe text on light backgrounds (WCAG AA) */
+  --color-ivory: #f5f0eb;
+  --color-ivory-deep: #ede3da;
+  --color-maroon: #302824;
+  --color-maroon-deep: #221c19;
+  --color-ink: #1e2622;
+  --color-stone: #6e655e;
 
   --font-display: var(--font-cormorant), "Cormorant Garamond", Georgia, serif;
   --font-caps: var(--font-cinzel), "Cinzel", Georgia, serif;
@@ -102,7 +106,7 @@ body {
   background: var(--color-navy-soft);
 }
 .btn-ghost-light {
-  border-color: rgba(244, 241, 234, 0.4);
+  border-color: rgba(245, 240, 235, 0.4);
   color: var(--color-ivory);
 }
 .btn-ghost-light:hover {
@@ -110,7 +114,7 @@ body {
   color: var(--color-champagne);
 }
 .btn-ghost-dark {
-  border-color: rgba(20, 33, 61, 0.3);
+  border-color: rgba(38, 59, 50, 0.3);
   color: var(--color-navy);
 }
 .btn-ghost-dark:hover {
@@ -122,7 +126,7 @@ body {
   min-height: 48px;
   padding: 0.75rem 1rem;
   background: #fff;
-  border: 1px solid rgba(20, 33, 61, 0.18);
+  border: 1px solid rgba(38, 59, 50, 0.18);
   color: var(--color-ink);
   font-size: 1rem;
   transition: border-color 0.3s;
@@ -130,7 +134,7 @@ body {
 .field:focus {
   outline: none;
   border-color: var(--color-champagne);
-  box-shadow: 0 0 0 3px rgba(212, 180, 131, 0.25);
+  box-shadow: 0 0 0 3px rgba(185, 155, 136, 0.25);
 }
 
 }

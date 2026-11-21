@@ -54,7 +54,7 @@ export default async function TrackOrder({ params }: { params: Promise<{ code: s
                 <div className="relative flex flex-col items-center sm:flex-row">
                   <span
                     className={`relative z-[1] flex h-10 w-10 shrink-0 items-center justify-center rounded-full border text-sm ${
-                      current ? "border-champagne bg-champagne text-navy shadow-[0_0_0_8px_rgba(212,180,131,0.18)]" : doneStage ? "border-champagne bg-champagne/20 text-champagne" : "border-ivory/20 text-ivory/30"
+                      current ? "border-champagne bg-champagne text-navy shadow-[0_0_0_8px_rgba(185,155,136,0.18)]" : doneStage ? "border-champagne bg-champagne/20 text-champagne" : "border-ivory/20 text-ivory/30"
                     }`}
                   >
                     {doneStage ? "✓" : i + 1}

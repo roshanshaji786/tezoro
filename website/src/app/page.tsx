@@ -7,9 +7,9 @@ import { fabricById, looks, processSteps, services } from "@/lib/content";
 import { site } from "@/lib/site";
 
 const paths = [
-  { href: "/bespoke", eyebrow: "I", title: "Bespoke", text: "Suits, shirts and trousers drafted for one man.", pattern: "twill", base: "#14213D", accent: "#2a3a63" },
-  { href: "/wedding", eyebrow: "II", title: "The Wedding Floor", text: "Sherwanis, bandhgalas and the whole family, planned to the day.", pattern: "brocade", base: "#5A1A24", accent: "#c8a66f" },
-  { href: "/lookbook", eyebrow: "III", title: "Lookbook", text: "Past commissions to spark your own. Never copied, only inspired.", pattern: "herringbone", base: "#a8957a", accent: "#cbb89b" },
+  { href: "/bespoke", eyebrow: "I", title: "Bespoke", text: "Suits, shirts and trousers drafted for one man.", pattern: "twill", base: "#263B32", accent: "#3b5a4c" },
+  { href: "/wedding", eyebrow: "II", title: "The Wedding Floor", text: "Sherwanis, bandhgalas and the whole family, planned to the day.", pattern: "brocade", base: "#302824", accent: "#b99b88" },
+  { href: "/lookbook", eyebrow: "III", title: "Lookbook", text: "Past commissions to spark your own. Never copied, only inspired.", pattern: "herringbone", base: "#b99b88", accent: "#dccdc1" },
 ] as const;
 
 const promises = [
@@ -24,7 +24,7 @@ export default function Home() {
     <>
       {/* HERO */}
       <section className="relative h-[100svh] min-h-[640px] overflow-hidden bg-navy-deep text-ivory">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_60%_60%,#1b2b52_0%,#0b1426_70%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_60%_60%,#2f4a3e_0%,#1b2b24_70%)]" />
         <HeroScene />
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-navy-deep/60 via-transparent to-navy-deep/90" />
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-navy-deep/85 via-navy-deep/30 to-transparent max-sm:bg-gradient-to-t max-sm:from-navy-deep max-sm:via-navy-deep/60" />

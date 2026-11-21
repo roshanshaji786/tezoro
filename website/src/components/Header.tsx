@@ -34,7 +34,7 @@ export function Header() {
   return (
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${
-        solid ? "bg-ivory/90 shadow-[0_1px_0_rgba(20,33,61,0.08)] backdrop-blur-md" : "bg-transparent"
+        solid ? "bg-ivory/90 shadow-[0_1px_0_rgba(38,59,50,0.08)] backdrop-blur-md" : "bg-transparent"
       }`}
     >
       <div className="mx-auto flex h-18 max-w-7xl items-center justify-between px-4 sm:px-8" style={{ height: 72 }}>

@@ -18,7 +18,7 @@ export default function Wedding() {
     <>
       <section className="grain relative overflow-hidden bg-maroon-deep pt-36 pb-20 text-ivory sm:pt-44">
         <div className="absolute inset-0 opacity-25">
-          <FabricArt pattern="brocade" base="#3d1118" accent="#c8a66f" scale={2.2} />
+          <FabricArt pattern="brocade" base="#221c19" accent="#b99b88" scale={2.2} />
         </div>
         <div className="absolute inset-0 bg-gradient-to-b from-maroon-deep/40 via-maroon-deep/70 to-maroon-deep" />
         <div className="relative z-[2] mx-auto max-w-7xl px-4 sm:px-8">
